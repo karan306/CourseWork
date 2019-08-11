@@ -1,0 +1,36 @@
+#lang racket
+(require 2htdp/universe)
+(require 2htdp/image)
+(require picturing-programs)
+(define brick (square 60 "solid" "brown"))
+(define coin (overlay (circle 20 "solid" "gold") (square 60 "solid" "black")))
+(define trapezium
+  (beside/align "bottom" (flip-horizontal (right-triangle  10 10 "solid" "purple"))
+                (beside/align "bottom" (rectangle 20 10 "solid" "purple") (right-triangle  10 10 "solid" "purple")
+                              )))
+(define diamond
+  (overlay (above/align "left" trapezium (triangle/sss 36.0555 36.0555 40 "solid" "purple"))
+           (square 60 "solid" "black")))
+(define ring (overlay (circle 5 "solid" "black") (circle 10 "solid" "gold")))
+(define key (overlay (beside/align "middle" (above/align "left" (rectangle 20 5 "solid" "gold") (rectangle 10 5 "solid" "gold")) ring)
+                     (square 60 "solid" "black")))
+(define door (let ((rec (rectangle 40 10 50 "orange")))
+               (overlay/xy rec -10 -10
+                           (overlay rec
+                                    (overlay/xy rec -10 -40 (square 60 "solid" "brown"))))))
+(define water (let ((rec (rectangle 60 2 150 "indigo")))
+                (overlay/xy rec 0 -5
+                            (overlay/xy rec 0 -17
+                                        (overlay rec
+                                                 (overlay/xy rec 0 -41
+                                                             (overlay/xy rec 0 -53 (square 60 "solid" "sky blue"))))))))
+(define river (beside/align "top" water water water water water))
+
+                                    
+
+
+;(define tree (
+;(big-bang (overlay diamond (rectangle 1600 800 "solid" "black"))
+;          ;(on-tick rotate-cw 1/2)
+;          (on-draw show-it))
+;;(define brick (square 80 "solid" "red"))
