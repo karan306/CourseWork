@@ -1,0 +1,98 @@
+Team Members 
+Shantanu Kumar 160050069
+Karan Kumar    160050068
+
+Key controls :-
+
+Z -> select the human character to move it
+Y -> select the teddy bear for movement
+X -> select the box for movement
+L -> select the platform of the puppets
+M -> save a frame
+P -> to start the animation of recorded frames
+
+YOU TUBE LINK - https://youtu.be/eYqRPcYGR6s
+
+
+For Human Character :-
+
+        0 -> move the neck
+        1 -> move the lower right hand
+        2 -> move the upper right hand
+        3 -> move the upper left hand 
+        4 -> move the lower left hand
+        5 -> move the abdomen
+        6 -> move the upper left leg
+        7 -> move the lower left leg
+        8 -> move the upper right leg
+        9 -> move the lower right leg
+
+        For all the nodes 
+        => left-right for rotation about y axis
+        => up-down for rotation about x axis
+        => PgUp-PgDn for rotation about z axis
+
+	=> F,U,I - incraese tx ty tz respectively
+	=> G,H,J - DECREASE tx ty tz respectively
+
+        For nodes with one degree of freedom like knee and elbow
+
+        for elbow use PgUp and PgDn for one degree of freedom
+        for knee use use left-right arrow key for the one degree of freedom
+
+        At some places like necks restict the movement to avoid detaching the part from the main body.
+
+        abdomen is the main parent of the entire humanoid so use keys to change to abdomen
+        and then rotate the abdomen for global rotation of the humanoid. 
+
+
+
+For Teddy Bear
+
+        0 -> move the stomach
+        1 ->  move the right hand
+        2 -> move the left hand
+        3 -> move the right leg
+        4 -> move the left leg
+        5 -> move the head
+
+        For all the nodes 
+        => left-right for rotation about y axis
+        => up-down for rotation about x axis
+        => PgUp-PgDn for rotation about z axis
+
+	=> F,U,I - incraese tx ty tz respectively
+	=> G,H,J - DECREASE tx ty tz respectively
+
+        Every node has 3 degree of freedom.
+
+        stomach is the main parent of the entire teddy bear so use keys to change to stomach
+        and then rotate the stomach for global rotation of the model. 
+
+
+For the box 
+
+        0 -> move the box
+        1 -> move the lid
+
+        For the box i.e. node1 
+        => left-right for rotation about y axis
+        => up-down for rotation about x axis
+        => PgUp-PgDn for rotation about z axis
+
+        For the lid i.e. node2
+
+        use up-down arrow key to open or close the lid
+
+       rotate the node1 for global rotation of the box.
+
+
+ESC -> to close the window
+P -> to enable or disable perspective
+
+A,D -> for rotating the camera along y axis
+W,S -> for rotating the camera along x axis
+Q,E -> for rotating the camera along z axis
+
+C,B,T - DECREASE x y z positions of camera
+V,N,O - INCREASE x y z positions of camera

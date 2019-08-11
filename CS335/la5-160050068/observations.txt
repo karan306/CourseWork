@@ -1,0 +1,36 @@
+Task 3:
+
+Looking at the plot if for lambdas l1,l2,l3 sse(l1)>sse(l2) and sse(l3)>sse(l2) , then take lambdas closer to l2(i.e,) and see if the graph becomes sufficiently constant(i.e, ) or if lambdas have become very close then report the sse obtained. Otherwise repeat the procedure. (I have commented some lambdas in task.py to check.)
+
+For ridge regression:
+
+optimal lambda = 12.5
+minimum sse = 1.7*1e11
+learning rate = 1e-5
+max_iterations = 30,000
+
+currently the lambda values were [12.0,12.25,12.5,12.75,13.0] for the plot but other values are commented above it in task.py.
+
+For lasso regression:
+
+optimal lambda = 3.5*1e5 (approximatley; sse values were very close for lambdas in the range(2e5 to 4e5) ,that is, the plot was looking like constant)
+minimum sse = 1.68*1e11
+max_iterations = 1000
+
+Explanation of plots:
+The SSE seems to first decrease and then increase with lambda for both Ridge and Lasso Regression. The minimum for Lasso is achived at a much higher lambda as expected since the loss function has lambda multiplied with the l1-norm of W, as compared to Ridge in which the loss function has lambda multiplied to l2-norm of W(l2-norm is generally much larger than l1-norm), forcing the lambda(for which the loss is minimum) to be smaller.
+
+-------------------------------------------------------------------------------------------
+
+Task 5:
+
+Lasso : 15.6 weights (on average) out of 304 were less than 1e-4 for lambda=12.5 ,though this is not the opotimum lambda. For optimum lambda, 206 weights were less than 1e-4
+
+Ridge : 2.16 weights (on average) out of 304 were less than 1e-4 for lambdda=12.5.
+
+(You can also see the plot for average number of zero weights against lambda by uncommenting lines 124 to 126 of task.py. and commenting lines 180 and 184)
+
+
+The solution of Lasso regression has many weights nearly equal to zero as compared to Ridge regression. This is because of the difference in the shape of countours of the regularising part of the loss function in Lasso and Ridge regression. As discussed in class, in Lasso regression, the contours of regularizing part of loss function meet at many zero points(that is on an axis) with the contours of non-regularizing part of loss function. While this does not happen in Ridge regression. 
+
+Inference : Lasso regression is somewhat better than ridge since it eliminates "not very important features", thus tackling overfitting better. Ridge regression does penalize unimportant weights but does not eliminate them.

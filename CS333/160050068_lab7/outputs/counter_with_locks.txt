@@ -1,0 +1,7 @@
+$ counter_with_locks
+20000
+$ counter_with_locks
+20000
+$ counter_with_locks
+20000
+$ 

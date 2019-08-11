@@ -1,0 +1,10 @@
+Obseravations:
+
+path.png:
+As can be seen in the image, the path is not optimal for reaching the goal state. Infact it takes 41 moves. (the moves can be seen in the file foo.txt after executing the script test.sh with filenames of the gridfile and solutions(which is not used here) and 0.2 , for example: ./test.sh data/maze/grid20.txt data/maze/solution20.txt 0.2 ).
+This happens  because with p=0.2 it makes the correct move only with probability 0.2+0.8/c where c is the no. of valid moves at the state and hence the move is almost random (when c=4, 0.2+0.8=0.4).
+
+
+plot.png:
+The exact values on the plot are : y co-ords [1846, 208, 132, 132, 38, 38, 34, 34, 32, 26, 22] with x co-ords [0.1*i for i in range(11)]
+The number of moves increases on decreasing the value of p. This is expected as with decrease in p, the randomness increases thereby taking many random steps before reaching the goal. For p=0, from a cell adjacent to the goal state, the expected reward for any action is the same, therefore it may take many random moves. There can be outliers i.e., with increase in p also, the no. of moves increases which may have happened because the agent took a very bad action at some state.

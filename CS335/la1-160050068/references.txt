@@ -1,0 +1,4 @@
+
+1) https://stackoverflow.com/questions/12995937/count-all-values-in-a-matrix-greater-than-a-value
+2) https://stackoverflow.com/questions/4362586/sum-a-list-of-numbers-in-python
+3) https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.nonzero.html

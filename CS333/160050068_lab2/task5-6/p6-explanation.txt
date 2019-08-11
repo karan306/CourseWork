@@ -1,0 +1,1 @@
+When the keyboard input is not provided the Stat was S+(which means interruptible sleep waiting for some event to complete) while after providing keyboard input the stat was Z+(which means a zombie process).

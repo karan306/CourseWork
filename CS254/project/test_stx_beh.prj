@@ -1,0 +1,6 @@
+vhdl isim_temp "seven_seg.vhdl"
+vhdl isim_temp "harness.vhdl"
+vhdl isim_temp "comm_fpga_fx2.vhdl"
+vhdl isim_temp "cksum_rtl.vhdl"
+vhdl isim_temp "top_level.vhdl"
+vhdl isim_temp "test.vhd"

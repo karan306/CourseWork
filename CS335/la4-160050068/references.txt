@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/227459/how-to-get-the-ascii-value-of-a-character
+https://stackoverflow.com/questions/35723865/read-a-pgm-file-in-python?rq=1
+https://www.geeksforgeeks.org/python-random-sample-function/

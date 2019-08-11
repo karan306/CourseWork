@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+FPGA SmartXplorer (tm) Version 14.7
+
+----------------------------------------------------------------------
+ Strategy : MapRunTime
+----------------------------------------------------------------------
+ Run index                           : run1
+ Map options                         : -ol high -w 
+ Par options                         : -ol high 
+ Number of Luts                      : 497 (1%)
+ Number of Slice Registers           : 314 (1%)
+ Status                              : Done
+ Achieved Timing Score               : 0
+ Worst Case Slack                : 8.595ns
+
+ Current Best (Lowest) Timing Score  : 0
+ Current Best Strategy               : MapRunTime
+----------------------------------------------------------------------
+######################################################################
+ BestStrategy : MapRunTime
+######################################################################
+ Run index                           : run1
+ Map options                         : -ol high -w 
+ Par options                         : -ol high 
+ Number of Luts                      : 497 (1%)
+ Number of Slice Registers           : 314 (1%)
+ Achieved Timing Score               : 0
+ Worst Case Slack                : 8.595ns
+
+######################################################################
+
+Total Real Time:68.5(secs)
+SmartXplorer Done

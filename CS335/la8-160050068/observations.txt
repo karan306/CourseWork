@@ -1,0 +1,47 @@
+Task 4:
+
+i)The number of iterations for task2_submit.png is much greater(>60) than task3_submit.png & task4_submit.png while it is about the same for task3 and task4(about 15 each). Also, the final optimal tour lengths are similar for all the the three, though for task3, the tour length is slightly smaller. For starting city 1, the values for both iterations and tour length is smallest for Nearest Neighbours method(task 3)
+	For this case the Nearest Neighbours method is better. This is a greedy and intuitive method which can be expected to work well in practice.
+	But in general Euclidean approximation should work better as it provides guaranteed bounds on the length of intial tour generated as stated in the problem description too. According to https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm , for every constant r there is an instance of the traveling salesman problem such that the length of the tour computed by the nearest neighbour algorithm is greater than r times the length of the optimal tour. Therefore there is no such guarantee for Nearest neighbour method. Both methods are better than random initialisation in general as they already have a start in a relatively good direction.
+
+
+**************************************************
+
+
+Task 6:
+
+i) The number of iterations with 3-opt + 2-opt Neighbours is always smaller than or equal to the number of iterations with only 2-opt Neighbours. For starting city = 1, the former method takes 40 iterations while the latter takes >60. For other cities also, the pattern is similar. 
+	This is expected(not always necessary) as the set of Neighbours obtained in the latter case is a subset of the former. The former method can generate better neighbours(unexplored by the 2-opt method) which can lead to a faster convergence. One thing to note here is that every 3-opt move can be simulated using two or three 2-opt moves. This also supports the observation. 
+	Also note that it does not imply that the former method takes less time since each single iteration performs much more computation. 
+
+(ii)The tour lengths with 3-opt + 2-opt Neighbours are smaller than  the tour lengths with only 2-opt Neighbours for each of the 5 initial city. On the graph its not easy to observe this but on printing the values, the difference in tour lengths was averaged about 40 to 50. 
+	This is expected(not always necessary) as the set of Neighbours obtained in the latter case is a subset of the former. The former method can generate better neighbours(unexplored by the 2-opt method) for which the tour length is smaller. This eventually leads to a better final tour(i.e. a tour to which the method converges).
+
+Therfore 3-opt + 2-opt is better than only 2-opt method of generating neighbours as the tour lengths are smaller, though the computation is costly as it took lot of time. But, in the end, the salesman will have to travel less.
+
+**************************************************
+
+
+Task 7:
+
+(i) The number of iterations with 3-opt + 2-opt Neighbours is always smaller than or equal to the number of iterations with only 2-opt Neighbours. For starting city = 1, the former method takes 10 iterations while the latter takes 14. For other cities also, the pattern is similar. 
+	This is expected(not always necessary) as the set of Neighbours obtained in the latter case is a subset of the former. The former method can generate better neighbours(unexplored by the 2-opt method) which can lead to a faster convergence. One thing to note here is that every 3-opt move can be simulated using two or three 2-opt moves. This also supports the observation. 
+	Also note that it does not imply that the former method takes less time since each single iteration performs much more computation.  
+
+(ii) The tour length with 3-opt + 2-opt Neighbours is always smaller than or equal to the tour length with only 2-opt Neighbours for each of the 5 initial city. For starting city = 4, the former method gives a tour of length about of 690 while the latter gives avout 710. For other cities also the pattern is similar.
+	This is expected(not always necessary) as the set of Neighbours obtained in the latter case is a subset of the former. The former method can generate better neighbours(unexplored by the 2-opt method) for which the tour length is smaller. This eventually leads to a better final tour(i.e. a tour to which the method converges).
+
+Therfore 3-opt + 2-opt is better than only 2-opt method of generating neighbours as the tour lengths are smaller though the computation is much more costly. For the salesman this is less travelling. But if it is particulary wanted that the computation of the tour does not take too much time, 2-opt may well be chosen as the percentage difference in tour lengths is not very great.
+
+**************************************************
+
+
+Task 8:
+
+i)The number of iterations with 3-opt + 2-opt Neighbours is just one smaller than the number of iterations with only 2-opt Neighbours. 
+	This is as expected for the same reason as stated in Task 6- (i)
+
+ii)The tour length is again very close for both methods though slightly better for the 3-opt + 2-opt Neighbours. This is as expected.
+
+Therefore 2-opt is better for generating neighbours as the time taken to converge for 3-opt + 2-opt is much much greater though having an iteration less and the tour length is also similar for both.
+

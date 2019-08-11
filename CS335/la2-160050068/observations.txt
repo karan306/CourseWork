@@ -1,0 +1,74 @@
+Task 1:
+
+1 Hidden layer with 10 nodes
+Output layer with 2 nodes
+Learning rate = 0.1
+Batch Size = 20
+Number of epochs = 20
+Seed =7
+
+With 5&6 nodes in hidden layer , with some seeds the accuracy was lower than 90%. So I have used 10 nodes for hidden layer.
+As the data is not linearly separable we cannot do with 1 node in hidden layer
+/*********
+nn1 = nn.NeuralNetwork(2, 0.1, 20, 20)
+nn1.addLayer(FullyConnectedLayer(2,10))
+nn1.addLayer(FullyConnectedLayer(10,2))
+**********/
+
+
+Task 2:
+
+1 Hidden layer with 10 nodes
+Output layer with 2 nodes
+Learning rate = 0.1
+Batch Size = 20
+Number of epochs = 20
+Seed = 7
+
+With 5&6 nodes in hidden layer , with some seeds the accuracy was lower than 90%. So I have used 10 nodes for hidden layer.
+As the data is not linearly separable we cannot do with 1 node in hidden layer
+/*********
+nn1 = nn.NeuralNetwork(2, 0.1, 20, 20)
+nn1.addLayer(FullyConnectedLayer(2,10))
+nn1.addLayer(FullyConnectedLayer(10,2))
+**********/
+
+
+Task 3:
+
+1 Hidden layer with 20 nodes
+Output layer with 10 nodes
+Learning rate = 0.1
+Batch Size = 10
+Number of epochs = 5
+Seed = 7
+
+With small number of nodes the validation accuracy was not well above 90. So used 20 nodes
+As the data is not linearly separable we cannot do with 1 node in hidden layer
+/*********
+nn1 = nn.NeuralNetwork(10, 0.1, 10, 5)
+nn1.addLayer(FullyConnectedLayer(784,20))
+nn1.addLayer(FullyConnectedLayer(20,10))
+**********/
+
+Task 4:
+
+1 ConvolutionLayer with 32 filters of size 3x10x10 and stride 2
+1 AvgPoolingLayer with stride 4 and input 32x12x12
+1 FlattenLayer to flatten the nodes in the AvgPoolingLayer
+1 Hidden FullyConnectedLayer with 288 nodes
+Output Layer with 10
+Learning rate = 0.1
+Batch Size = 20
+Number of epochs = 20
+Seed = 12
+
+With small layers, the validation accuracy was sometimes decreasing with epochs
+/*********
+nn1 = nn.NeuralNetwork(10, 0.1, 20, 20)
+nn1.addLayer(ConvolutionLayer([3,32,32], [10,10], 32, 2))
+nn1.addLayer(AvgPoolingLayer([32,12,12], [4,4], 4))
+nn1.addLayer(FlattenLayer())
+nn1.addLayer(FullyConnectedLayer(288,100))
+nn1.addLayer(FullyConnectedLayer(100,10))
+**********/

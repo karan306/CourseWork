@@ -1,0 +1,54 @@
+Task 4:
+
+Note: I have used the same number of samples for each weak learner as there were in the original dataset. Therefore the trainig accuracies are a very high
+
+I tried 60 iterations on both bagging and boosting. But the accuracies were not very different from what seen with 20.
+For bagging:
+Training...
+920 correct out of 1000 (92.0%).
+Validating...
+783 correct out of 1000 (78.3%).
+Testing...
+779 correct out of 1000 (77.9%).
+For boosting:
+Training...
+1000 correct out of 1000 (100.0%).
+Validating...
+773 correct out of 1000 (77.3%).
+Testing...
+764 correct out of 1000 (76.4%).
+
+For no. of iterations 1-20, the values can be seen from the plots.
+The plots of trainig are described below. The validation accuracy and test accuracy for both bagging and boosting increases with the number of classifiers(in boosting it is the same as number of iterations). After a certain limit they don't change much for both boosting and bagging.
+This happens as initilally more classifiers are able to learn more features. But after a certain time, the new classifiers don't really learn new features of importance.
+Also the accuracies are a bit higher in case of bagging. This doesn't happen in general but here it seems that as the in boosting, the trainig accuracy is very high, there might be some overfitting.
+
+
+Additional questions:
+
+1.
+--The training accuracy of boosting is greater than that of bagging. This is expected as bagging does not iteratively focus more(i.e. give more weightage) on examples it is predicting wrong. Also it is thoretically proved that a strong learner created using weak learners with the ada-boost algorithm can give accuracy very close to 100% while there is no such guarantee for bagging.
+--The training accuracy in both boosting and bagging increases with the number of classifiers (in boosting it is the same as the number of iterations) upto a certain limit after which there is negligible change in training accuracy.
+This happens as initilally more classifiers are able to learn more features. But after a certain time, the new classifiers don't really learn new features in case of bagging. In case of boosting the training accuracy is almost 100% after 30-40 iterations. Therefore, there isn't much scope for improvement, along with the fact that there isn't much new the new perceptron can learn.
+
+2.
+         \p|
+          \|
+           \
+           |\
+           | \
+           |  \      p
+           |   \
+           |    \
+           |     \
+         I |      \ II
+       n   |       \
+           |   p   -\+
+          -|+        \
+           |          \                 +
+___________|___________\__________________
+           |      III   \               -
+        n  |       n     \   p
+           |              \
+           |
+Consider 3 planes for 3 percerptrons having equal weight(shown here as lines). The signs + shows that everything to that side of the plane will be classified as positive and similarly - for negative. With equal weights, the regions which will be predicted positive by the ensembled learner are indicated as p and negative by n. Clearly these points are not linearly separable. So a single perceptron cannot represent this ensemble combining 3 perceptrons. So, the above statement is true.

@@ -1,0 +1,7 @@
+$ counter_without_locks
+14117
+$ counter_without_locks
+15234
+$ counter_without_locks
+12941
+$ 

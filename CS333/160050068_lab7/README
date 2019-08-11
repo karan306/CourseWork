@@ -1,0 +1,14 @@
+Roll No. 160050068
+
+
+PART 0
+
+i. acquire(struct spinlock *lk) and release(struct spinlock *lk) respectively
+
+ii. Check whether this cpu is holding the lock.
+
+iii. Adding another call to acquire before the acquire will produce a panic as the current cpu is already holding the lock and the condition 'if holding(lk)' will become true for the second call to acquire resulting in the panic.
+
+iv. Done.
+
+v. If a sti() call is added just after acquire and a cli() call is added just before release(), interrupts will be enabled while the current process has the lock. Now if an interrupt occurs on the same cpu between sti() and cli(), the interrupt will try to acquire the lock but the condition 'if holding(lk)' will become true for the interrupt and a panic will terminate the interrupt. Note that if only a cli() call is added just before release()(and not a sti() call before acquire), it should not cause any problems as before releasing the lock, interrupts are already disabled. 

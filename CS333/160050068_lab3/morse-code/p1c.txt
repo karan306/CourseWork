@@ -1,0 +1,14 @@
+
+I had given random sleeps less than 10 to child and grand-child and sleep 11 to the parent.
+
+Obsevations:
+
+1. The parent did not receive the signal for the grand child.
+2. When the sleep for child was less than grand-child the child exited first and hence no exit message was shown for the grand_child's exit.
+3. When the sleep for child was more than grand-child the child exited later and hence exit message was shown for the grand_child's exit.
+
+Reasons:
+
+1. Since the grand-child was created in the child's process and not the parents, the parent didn't get signal about it.
+2. When the child exits before the grand-child there is no one to catch the signal.
+3. The signal SIGCHLD is received when a child process is about to be killed

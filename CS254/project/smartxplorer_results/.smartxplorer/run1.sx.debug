@@ -1,0 +1,45 @@
+strategySpecString = ':oc:sqmap:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsw:sp:sq:cm:sp:sqpower:sq:cl:sp:sqoff:sq:cm:sp:sqbitgen:sq:cl:sp:sqon:sq:cm:sp:sqsynplify:sq:cl:sp:sq:sq:cm:sp:sqngdbuild:sq:cl:sp:sq:dssd:sp:clslhome:clslnikhilsamrat:clslfpgalink:sp:dsp:spxc6slx45:dscsg324:ds3:sq:cm:sp:sqtrce:sq:cl:sp:sq:dsv:sp3:sp:dss:sp3:sp:dsn:sp3:sp:dsfastpaths:sp:dsxml:sptop_level.twx:sp:dsucf:spboard.ucf:sq:cm:sp:sqmax_score:sq:cl:spNone:cm:sp:sqindex:sq:cl:sp1:cm:sp:sqpar:sq:cl:sp:sq:sp:dsol:sphigh:sp:sq:cm:sp:sqname:sq:cl:sp:sqMapRunTime:sq:cm:sp:sqxst:sq:cl:sp:sq:sq:cm:sp:sqarea:sq:cl:sp:os:sqlut:sq:cm:sp:sqslice_reg:sq:cs:cm:sp:sqversion:sq:cl:sp:sq14.7:sq:cm:sp:sqenv:sq:cl:sp:sq:oc:cc:sq:cm:sp:sqsxLaunchDir:sq:cl:sp:sq:slhome:slnikhilsamrat:slfpgalink:sq:cc'
+Xilinx Environment Variables:
+
+{'XILINX': '/opt/Xilinx/14.7/ISE_DS/ISE/'
+'PATH': '/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/nikhilsamrat/bin:/home/nikhilsamrat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nikhilsamrat/Downloads/android-studio/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64'
+'LD_LIBRARY_PATH': '/opt/Xilinx/14.7/ISE_DS/ISE//lib/lin64'}
+envDict = {}
+PATH = ['/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64', '/home/nikhilsamrat/bin', '/home/nikhilsamrat/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/home/nikhilsamrat/Downloads/android-studio/bin', '/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64']
+Found xst at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xst.
+Found ngdbuild at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ngdbuild.
+Found map at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/map.
+Found par at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/par.
+Found trce at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/trce.
+Found xpwr at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xpwr.
+Found bitgen at /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/bitgen.
+nikhilsamrat-Lenovo-ideapad-Y700-15ISK_0.stat:/home/nikhilsamrat/fpgalink/smartxplorer_results/.smartxplorer/.sx.keepAlive.nikhilsamrat-Lenovo-ideapad-Y700-15ISK_0
+INFO: total number of threads running this host 740
+...searching for file: mapruntime.xds
+Creating XDS file ... mapruntime.xds
+###################################
+
+      <property name = "Map:Placer Effort Level"
+               value = "High" />
+      <property name = "Place &amp; Route:Place &amp; Route Effort Level (Overall)"
+               value = "High" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Number of Paths in Error/Verbose Report"
+               value = "3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Type"
+               value = "Verbose Report" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Change Device Speed To"
+               value = "-3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Paths by Endpoint"
+               value = "3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Fastest Path(s) in Each Constraint"
+               value = "true" />
+###################################
+launching map with options  -ol high -w  -p xc6slx45-csg324-3 -o top_level_map.ncd  :slhome:slnikhilsamrat:slfpgalink:slsmartxplorer_results:slrun1:sltop_level.pcf...
+runTask: map top_level.ngd -ol high -w -p xc6slx45-csg324-3 -o top_level_map.ncd /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf
+args = ['map', 'top_level.ngd', '-ol', 'high', '-w', '-p', 'xc6slx45-csg324-3', '-o', 'top_level_map.ncd', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf']
+launching par with options  -ol high  -w top_level.ncd  :slhome:slnikhilsamrat:slfpgalink:slsmartxplorer_results:slrun1:sltop_level.pcf...
+runTask: par top_level_map.ncd -ol high -w top_level.ncd /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf
+args = ['par', 'top_level_map.ncd', '-ol', 'high', '-w', 'top_level.ncd', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf']
+launching trce...
+runTask: trce /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.ncd /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf -xml /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.twx -v 3 -s 3 -n 3 -fastpaths -ucf board.ucf -o /home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.twr
+args = ['trce', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.ncd', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.pcf', '-xml', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.twx', '-v', '3', '-s', '3', '-n', '3', '-fastpaths', '-ucf', 'board.ucf', '-o', '/home/nikhilsamrat/fpgalink/smartxplorer_results/run1/top_level.twr']

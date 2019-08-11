@@ -1,0 +1,32 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/nikhilsamrat/fpgalink/test_isim_beh.exe" -prj "/home/nikhilsamrat/fpgalink/test_beh.prj" "work.test" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/seven_seg.vhdl" into library work
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/harness.vhdl" into library work
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/comm_fpga_fx2.vhdl" into library work
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/cksum_rtl.vhdl" into library work
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/top_level.vhdl" into library work
+Parsing VHDL file "/home/nikhilsamrat/fpgalink/test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 98224 KB
+Fuse CPU Usage: 1130 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture rtl of entity comm_fpga_fx2 [comm_fpga_fx2_default]
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture rt1 of entity seven_seg [seven_seg_default]
+Compiling architecture rtl of entity swled [swled_default]
+Compiling architecture structural of entity top_level [top_level_default]
+Compiling architecture behavior of entity test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 14 VHDL Units
+Built simulation executable /home/nikhilsamrat/fpgalink/test_isim_beh.exe
+Fuse Memory Usage: 1198468 KB
+Fuse CPU Usage: 1240 ms
+GCC CPU Usage: 70 ms

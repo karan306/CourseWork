@@ -1,0 +1,445 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Apr 12 13:17:23 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "fx2Clk_in" LOCATE = SITE "C10" LEVEL 1;
+COMP "up" LOCATE = SITE "N4" LEVEL 1;
+COMP "fx2Data_io<0>" LOCATE = SITE "A2" LEVEL 1;
+COMP "fx2Data_io<1>" LOCATE = SITE "D6" LEVEL 1;
+COMP "fx2Data_io<2>" LOCATE = SITE "C6" LEVEL 1;
+COMP "fx2Data_io<3>" LOCATE = SITE "B3" LEVEL 1;
+COMP "fx2Data_io<4>" LOCATE = SITE "A3" LEVEL 1;
+COMP "fx2Data_io<5>" LOCATE = SITE "B4" LEVEL 1;
+COMP "fx2Data_io<6>" LOCATE = SITE "A4" LEVEL 1;
+COMP "fx2Data_io<7>" LOCATE = SITE "C5" LEVEL 1;
+COMP "left" LOCATE = SITE "P4" LEVEL 1;
+COMP "down" LOCATE = SITE "P3" LEVEL 1;
+COMP "fx2Read_out" LOCATE = SITE "F13" LEVEL 1;
+COMP "right" LOCATE = SITE "F6" LEVEL 1;
+COMP "reset" LOCATE = SITE "F5" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "uart_rx" LOCATE = SITE "A16" LEVEL 1;
+COMP "uart_tx" LOCATE = SITE "B16" LEVEL 1;
+COMP "sys_clk" LOCATE = SITE "L15" LEVEL 1;
+COMP "fx2GotData_in" LOCATE = SITE "C15" LEVEL 1;
+COMP "fx2GotRoom_in" LOCATE = SITE "A9" LEVEL 1;
+COMP "led_out<0>" LOCATE = SITE "U18" LEVEL 1;
+COMP "led_out<1>" LOCATE = SITE "M14" LEVEL 1;
+COMP "led_out<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "led_out<3>" LOCATE = SITE "L14" LEVEL 1;
+COMP "led_out<4>" LOCATE = SITE "M13" LEVEL 1;
+COMP "led_out<5>" LOCATE = SITE "D4" LEVEL 1;
+COMP "led_out<6>" LOCATE = SITE "P16" LEVEL 1;
+COMP "led_out<7>" LOCATE = SITE "N12" LEVEL 1;
+COMP "fx2Write_out" LOCATE = SITE "E13" LEVEL 1;
+COMP "sw_in<0>" LOCATE = SITE "A10" LEVEL 1;
+COMP "sw_in<1>" LOCATE = SITE "D14" LEVEL 1;
+COMP "sw_in<2>" LOCATE = SITE "C14" LEVEL 1;
+COMP "sw_in<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "sw_in<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "sw_in<5>" LOCATE = SITE "R5" LEVEL 1;
+COMP "sw_in<6>" LOCATE = SITE "T5" LEVEL 1;
+COMP "sw_in<7>" LOCATE = SITE "E4" LEVEL 1;
+COMP "fx2PktEnd_out" LOCATE = SITE "C4" LEVEL 1;
+COMP "fx2Addr_out<0>" LOCATE = SITE "A14" LEVEL 1;
+COMP "fx2Addr_out<1>" LOCATE = SITE "B14" LEVEL 1;
+COMP "fx2OE_out" LOCATE = SITE "A15" LEVEL 1;
+TIMEGRP fx2Clk_in = BEL "comm_fpga_fx2/state_FSM_FFd1" BEL
+        "comm_fpga_fx2/state_FSM_FFd2" BEL "comm_fpga_fx2/state_FSM_FFd3" BEL
+        "comm_fpga_fx2/state_FSM_FFd4" BEL "comm_fpga_fx2/count_16" BEL
+        "comm_fpga_fx2/count_15" BEL "comm_fpga_fx2/count_14" BEL
+        "comm_fpga_fx2/count_13" BEL "comm_fpga_fx2/count_12" BEL
+        "comm_fpga_fx2/count_11" BEL "comm_fpga_fx2/count_10" BEL
+        "comm_fpga_fx2/count_9" BEL "comm_fpga_fx2/count_8" BEL
+        "comm_fpga_fx2/count_7" BEL "comm_fpga_fx2/count_6" BEL
+        "comm_fpga_fx2/count_5" BEL "comm_fpga_fx2/count_4" BEL
+        "comm_fpga_fx2/count_3" BEL "comm_fpga_fx2/count_2" BEL
+        "comm_fpga_fx2/count_1" BEL "comm_fpga_fx2/count_0" BEL
+        "comm_fpga_fx2/isWrite" BEL "comm_fpga_fx2/chanAddr_6" BEL
+        "comm_fpga_fx2/chanAddr_5" BEL "comm_fpga_fx2/chanAddr_4" BEL
+        "comm_fpga_fx2/chanAddr_3" BEL "comm_fpga_fx2/chanAddr_2" BEL
+        "comm_fpga_fx2/chanAddr_1" BEL "comm_fpga_fx2/chanAddr_0" BEL
+        "swled_app/Z_FSM_FFd1" BEL "swled_app/Z_FSM_FFd2" BEL
+        "swled_app/counter_8" BEL "swled_app/counter_7" BEL
+        "swled_app/counter_6" BEL "swled_app/counter_5" BEL
+        "swled_app/counter_4" BEL "swled_app/counter_3" BEL
+        "swled_app/counter_2" BEL "swled_app/counter_1" BEL
+        "swled_app/counter_0" BEL "swled_app/temp_62" BEL "swled_app/temp_61"
+        BEL "swled_app/temp_60" BEL "swled_app/temp_59" BEL
+        "swled_app/temp_58" BEL "swled_app/temp_57" BEL "swled_app/temp_54"
+        BEL "swled_app/temp_53" BEL "swled_app/temp_52" BEL
+        "swled_app/temp_51" BEL "swled_app/temp_50" BEL "swled_app/temp_49"
+        BEL "swled_app/temp_46" BEL "swled_app/temp_45" BEL
+        "swled_app/temp_44" BEL "swled_app/temp_43" BEL "swled_app/temp_42"
+        BEL "swled_app/temp_41" BEL "swled_app/temp_38" BEL
+        "swled_app/temp_37" BEL "swled_app/temp_36" BEL "swled_app/temp_35"
+        BEL "swled_app/temp_34" BEL "swled_app/temp_33" BEL
+        "swled_app/temp_30" BEL "swled_app/temp_29" BEL "swled_app/temp_28"
+        BEL "swled_app/temp_27" BEL "swled_app/temp_26" BEL
+        "swled_app/temp_25" BEL "swled_app/temp_22" BEL "swled_app/temp_21"
+        BEL "swled_app/temp_20" BEL "swled_app/temp_19" BEL
+        "swled_app/temp_18" BEL "swled_app/temp_17" BEL "swled_app/temp_14"
+        BEL "swled_app/temp_13" BEL "swled_app/temp_12" BEL
+        "swled_app/temp_11" BEL "swled_app/temp_10" BEL "swled_app/temp_9" BEL
+        "swled_app/temp_6" BEL "swled_app/temp_5" BEL "swled_app/temp_4" BEL
+        "swled_app/temp_3" BEL "swled_app/temp_2" BEL "swled_app/temp_1" BEL
+        "swled_app/tim_27" BEL "swled_app/tim_26" BEL "swled_app/tim_25" BEL
+        "swled_app/tim_24" BEL "swled_app/tim_23" BEL "swled_app/tim_22" BEL
+        "swled_app/tim_21" BEL "swled_app/tim_20" BEL "swled_app/tim_19" BEL
+        "swled_app/tim_18" BEL "swled_app/tim_17" BEL "swled_app/tim_16" BEL
+        "swled_app/tim_15" BEL "swled_app/tim_14" BEL "swled_app/tim_13" BEL
+        "swled_app/tim_12" BEL "swled_app/tim_11" BEL "swled_app/tim_10" BEL
+        "swled_app/tim_9" BEL "swled_app/tim_8" BEL "swled_app/tim_7" BEL
+        "swled_app/tim_6" BEL "swled_app/tim_5" BEL "swled_app/tim_4" BEL
+        "swled_app/tim_3" BEL "swled_app/tim_2" BEL "swled_app/tim_1" BEL
+        "swled_app/tim_0" BEL "swled_app/temp1_31" BEL "swled_app/temp1_30"
+        BEL "swled_app/temp1_29" BEL "swled_app/temp1_28" BEL
+        "swled_app/temp1_27" BEL "swled_app/temp1_26" BEL "swled_app/temp1_25"
+        BEL "swled_app/temp1_24" BEL "swled_app/temp1_23" BEL
+        "swled_app/temp1_22" BEL "swled_app/temp1_21" BEL "swled_app/temp1_20"
+        BEL "swled_app/temp1_19" BEL "swled_app/temp1_18" BEL
+        "swled_app/temp1_17" BEL "swled_app/temp1_16" BEL "swled_app/temp1_15"
+        BEL "swled_app/temp1_14" BEL "swled_app/temp1_13" BEL
+        "swled_app/temp1_12" BEL "swled_app/temp1_11" BEL "swled_app/temp1_10"
+        BEL "swled_app/temp1_9" BEL "swled_app/temp1_8" BEL
+        "swled_app/temp1_7" BEL "swled_app/temp1_6" BEL "swled_app/temp1_5"
+        BEL "swled_app/temp1_4" BEL "swled_app/temp1_3" BEL
+        "swled_app/temp1_2" BEL "swled_app/temp1_1" BEL "swled_app/temp1_0"
+        BEL "swled_app/temp2_14" BEL "swled_app/temp2_8" BEL
+        "swled_app/temp2_7" BEL "swled_app/temp2_6" BEL "swled_app/temp2_5"
+        BEL "swled_app/temp2_4" BEL "swled_app/temp2_3" BEL
+        "swled_app/temp2_2" BEL "swled_app/temp2_1" BEL "swled_app/temp2_0"
+        BEL "swled_app/tmp2_7" BEL "swled_app/tmp2_6" BEL "swled_app/tmp2_5"
+        BEL "swled_app/tmp2_4" BEL "swled_app/tmp2_3" BEL "swled_app/tmp2_2"
+        BEL "swled_app/tmp2_1" BEL "swled_app/tmp2_0" BEL "swled_app/reg0_7"
+        BEL "swled_app/reg0_6" BEL "swled_app/reg0_5" BEL "swled_app/reg0_4"
+        BEL "swled_app/reg0_3" BEL "swled_app/reg0_2" BEL "swled_app/reg0_1"
+        BEL "swled_app/reg0_0" BEL "swled_app/encrypt/N1_5" BEL
+        "swled_app/encrypt/N1_4" BEL "swled_app/encrypt/N1_3" BEL
+        "swled_app/encrypt/N1_2" BEL "swled_app/encrypt/N1_1" BEL
+        "swled_app/encrypt/N1_0" BEL "swled_app/encrypt/T_3" BEL
+        "swled_app/encrypt/T_2" BEL "swled_app/encrypt/T_1" BEL
+        "swled_app/encrypt/T_0" BEL "swled_app/encrypt/C_31" BEL
+        "swled_app/encrypt/C_30" BEL "swled_app/encrypt/C_29" BEL
+        "swled_app/encrypt/C_28" BEL "swled_app/encrypt/C_27" BEL
+        "swled_app/encrypt/C_26" BEL "swled_app/encrypt/C_21" BEL
+        "swled_app/encrypt/C_7" BEL "swled_app/encrypt/C_6" BEL
+        "swled_app/encrypt/C_5" BEL "swled_app/encrypt/C_4" BEL
+        "swled_app/encrypt/C_3" BEL "swled_app/encrypt/C_2" BEL
+        "swled_app/encrypt/C_1" BEL "swled_app/encrypt/C_0" BEL
+        "swled_app/encrypt/X_31" BEL "swled_app/encrypt/X_30" BEL
+        "swled_app/encrypt/X_29" BEL "swled_app/encrypt/X_28" BEL
+        "swled_app/encrypt/X_27" BEL "swled_app/encrypt/X_26" BEL
+        "swled_app/encrypt/X_21" BEL "swled_app/encrypt/X_7" BEL
+        "swled_app/encrypt/X_6" BEL "swled_app/encrypt/X_5" BEL
+        "swled_app/encrypt/X_4" BEL "swled_app/encrypt/X_3" BEL
+        "swled_app/encrypt/X_2" BEL "swled_app/encrypt/X_1" BEL
+        "swled_app/encrypt/X_0" BEL "swled_app/decrypt/N1_5" BEL
+        "swled_app/decrypt/N1_4" BEL "swled_app/decrypt/N1_3" BEL
+        "swled_app/decrypt/N1_2" BEL "swled_app/decrypt/N1_1" BEL
+        "swled_app/decrypt/N1_0" BEL "swled_app/decrypt/T_3" BEL
+        "swled_app/decrypt/T_2" BEL "swled_app/decrypt/T_1" BEL
+        "swled_app/decrypt/T_0" BEL "swled_app/decrypt/P_31" BEL
+        "swled_app/decrypt/P_30" BEL "swled_app/decrypt/P_29" BEL
+        "swled_app/decrypt/P_28" BEL "swled_app/decrypt/P_27" BEL
+        "swled_app/decrypt/P_26" BEL "swled_app/decrypt/P_25" BEL
+        "swled_app/decrypt/P_24" BEL "swled_app/decrypt/P_23" BEL
+        "swled_app/decrypt/P_22" BEL "swled_app/decrypt/P_21" BEL
+        "swled_app/decrypt/P_20" BEL "swled_app/decrypt/P_19" BEL
+        "swled_app/decrypt/P_18" BEL "swled_app/decrypt/P_17" BEL
+        "swled_app/decrypt/P_16" BEL "swled_app/decrypt/P_15" BEL
+        "swled_app/decrypt/P_14" BEL "swled_app/decrypt/P_13" BEL
+        "swled_app/decrypt/P_12" BEL "swled_app/decrypt/P_11" BEL
+        "swled_app/decrypt/P_10" BEL "swled_app/decrypt/P_9" BEL
+        "swled_app/decrypt/P_8" BEL "swled_app/decrypt/P_7" BEL
+        "swled_app/decrypt/P_6" BEL "swled_app/decrypt/P_5" BEL
+        "swled_app/decrypt/P_4" BEL "swled_app/decrypt/P_3" BEL
+        "swled_app/decrypt/P_2" BEL "swled_app/decrypt/P_1" BEL
+        "swled_app/decrypt/P_0" BEL "swled_app/decrypt/X_31" BEL
+        "swled_app/decrypt/X_30" BEL "swled_app/decrypt/X_29" BEL
+        "swled_app/decrypt/X_28" BEL "swled_app/decrypt/X_27" BEL
+        "swled_app/decrypt/X_26" BEL "swled_app/decrypt/X_25" BEL
+        "swled_app/decrypt/X_24" BEL "swled_app/decrypt/X_23" BEL
+        "swled_app/decrypt/X_22" BEL "swled_app/decrypt/X_21" BEL
+        "swled_app/decrypt/X_20" BEL "swled_app/decrypt/X_19" BEL
+        "swled_app/decrypt/X_18" BEL "swled_app/decrypt/X_17" BEL
+        "swled_app/decrypt/X_16" BEL "swled_app/decrypt/X_15" BEL
+        "swled_app/decrypt/X_14" BEL "swled_app/decrypt/X_13" BEL
+        "swled_app/decrypt/X_12" BEL "swled_app/decrypt/X_11" BEL
+        "swled_app/decrypt/X_10" BEL "swled_app/decrypt/X_9" BEL
+        "swled_app/decrypt/X_8" BEL "swled_app/decrypt/X_7" BEL
+        "swled_app/decrypt/X_6" BEL "swled_app/decrypt/X_5" BEL
+        "swled_app/decrypt/X_4" BEL "swled_app/decrypt/X_3" BEL
+        "swled_app/decrypt/X_2" BEL "swled_app/decrypt/X_1" BEL
+        "swled_app/decrypt/X_0" BEL "debouncer4/count_19" BEL
+        "debouncer4/count_18" BEL "debouncer4/count_17" BEL
+        "debouncer4/count_16" BEL "debouncer4/count_15" BEL
+        "debouncer4/count_14" BEL "debouncer4/count_13" BEL
+        "debouncer4/count_12" BEL "debouncer4/count_11" BEL
+        "debouncer4/count_10" BEL "debouncer4/count_9" BEL
+        "debouncer4/count_8" BEL "debouncer4/count_7" BEL "debouncer4/count_6"
+        BEL "debouncer4/count_5" BEL "debouncer4/count_4" BEL
+        "debouncer4/count_3" BEL "debouncer4/count_2" BEL "debouncer4/count_1"
+        BEL "debouncer4/count_0" BEL "debouncer3/count_19" BEL
+        "debouncer3/count_18" BEL "debouncer3/count_17" BEL
+        "debouncer3/count_16" BEL "debouncer3/count_15" BEL
+        "debouncer3/count_14" BEL "debouncer3/count_13" BEL
+        "debouncer3/count_12" BEL "debouncer3/count_11" BEL
+        "debouncer3/count_10" BEL "debouncer3/count_9" BEL
+        "debouncer3/count_8" BEL "debouncer3/count_7" BEL "debouncer3/count_6"
+        BEL "debouncer3/count_5" BEL "debouncer3/count_4" BEL
+        "debouncer3/count_3" BEL "debouncer3/count_2" BEL "debouncer3/count_1"
+        BEL "debouncer3/count_0" BEL "debouncer2/count_19" BEL
+        "debouncer2/count_18" BEL "debouncer2/count_17" BEL
+        "debouncer2/count_16" BEL "debouncer2/count_15" BEL
+        "debouncer2/count_14" BEL "debouncer2/count_13" BEL
+        "debouncer2/count_12" BEL "debouncer2/count_11" BEL
+        "debouncer2/count_10" BEL "debouncer2/count_9" BEL
+        "debouncer2/count_8" BEL "debouncer2/count_7" BEL "debouncer2/count_6"
+        BEL "debouncer2/count_5" BEL "debouncer2/count_4" BEL
+        "debouncer2/count_3" BEL "debouncer2/count_2" BEL "debouncer2/count_1"
+        BEL "debouncer2/count_0" BEL "debouncer1/count_19" BEL
+        "debouncer1/count_18" BEL "debouncer1/count_17" BEL
+        "debouncer1/count_16" BEL "debouncer1/count_15" BEL
+        "debouncer1/count_14" BEL "debouncer1/count_13" BEL
+        "debouncer1/count_12" BEL "debouncer1/count_11" BEL
+        "debouncer1/count_10" BEL "debouncer1/count_9" BEL
+        "debouncer1/count_8" BEL "debouncer1/count_7" BEL "debouncer1/count_6"
+        BEL "debouncer1/count_5" BEL "debouncer1/count_4" BEL
+        "debouncer1/count_3" BEL "debouncer1/count_2" BEL "debouncer1/count_1"
+        BEL "debouncer1/count_0" BEL "swled_app/outreg0_7" BEL
+        "swled_app/outreg0_6" BEL "swled_app/outreg0_5" BEL
+        "swled_app/outreg0_4" BEL "swled_app/outreg0_3" BEL
+        "swled_app/outreg0_2" BEL "swled_app/outreg0_1" BEL
+        "swled_app/outreg0_0" BEL "comm_fpga_fx2/isAligned" BEL
+        "debouncer4/button_deb" BEL "debouncer4/oldbutton" BEL
+        "debouncer3/button_deb" BEL "debouncer3/oldbutton" BEL
+        "debouncer2/button_deb" BEL "debouncer2/oldbutton" BEL
+        "debouncer1/button_deb" BEL "debouncer1/oldbutton" BEL "swled_app/f2h"
+        BEL "swled_app/e_enable" BEL "swled_app/pop" BEL "swled_app/d_enable"
+        BEL "swled_app/h2f" BEL "swled_app/start" BEL "swled_app/reset" BEL
+        "swled_app/encrypt/done" BEL "swled_app/decrypt/done" BEL
+        "comm_fpga_fx2/state_FSM_FFd4_1" BEL "swled_app/Y_3" BEL
+        "swled_app/Y_4" BEL "swled_app/X_4" BEL "swled_app/X_4_1" BEL
+        "swled_app/X_4_2" BEL "swled_app/Y_1" BEL "swled_app/X_0" BEL
+        "swled_app/X_0_1" BEL "swled_app/Y_2" BEL "swled_app/Y_0" BEL
+        "swled_app/X_2" BEL "swled_app/X_1" BEL "swled_app/X_1_1" BEL
+        "swled_app/X_2_1" BEL "swled_app/X_3" BEL "swled_app/X_3_1" BEL
+        "swled_app/X_3_2" BEL "swled_app/Y_3_1" BEL "swled_app/Y_4_1" BEL
+        "swled_app/X_1_2" BEL "swled_app/X_2_2" BEL "swled_app/X_0_2" BEL
+        "swled_app/X_4_3" BEL "swled_app/sleep_25" BEL "swled_app/sleep_24"
+        BEL "swled_app/sleep_23" BEL "swled_app/sleep_22" BEL
+        "swled_app/sleep_21" BEL "swled_app/sleep_20" BEL "swled_app/sleep_19"
+        BEL "swled_app/sleep_18" BEL "swled_app/sleep_17" BEL
+        "swled_app/sleep_16" BEL "swled_app/sleep_15" BEL "swled_app/sleep_14"
+        BEL "swled_app/sleep_13" BEL "swled_app/sleep_12" BEL
+        "swled_app/sleep_11" BEL "swled_app/sleep_10" BEL "swled_app/sleep_9"
+        BEL "swled_app/sleep_8" BEL "swled_app/sleep_7" BEL
+        "swled_app/sleep_6" BEL "swled_app/sleep_5" BEL "swled_app/sleep_4"
+        BEL "swled_app/sleep_3" BEL "swled_app/sleep_2" BEL
+        "swled_app/sleep_1" BEL "swled_app/sleep_0" BEL "swled_app/Y_1_1" BEL
+        "swled_app/Y_4_2" BEL "fx2Clk_in_BUFGP/BUFG";
+PIN
+        i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<26>
+        = BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<27>
+        = BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP sys_clk_pin = BEL "i_uart/Bempty" BEL "i_uart/din_7" BEL
+        "i_uart/din_6" BEL "i_uart/din_5" BEL "i_uart/din_4" BEL
+        "i_uart/din_3" BEL "i_uart/din_2" BEL "i_uart/din_1" BEL
+        "i_uart/din_0" BEL "i_uart/i_tx/tx_Cstate_FSM_FFd1" BEL
+        "i_uart/i_tx/tx_Cstate_FSM_FFd2" BEL "i_uart/i_tx/bitcntr_2" BEL
+        "i_uart/i_tx/bitcntr_1" BEL "i_uart/i_tx/bitcntr_0" BEL
+        "i_uart/i_tx/tickcntr_30" BEL "i_uart/i_tx/tickcntr_29" BEL
+        "i_uart/i_tx/tickcntr_28" BEL "i_uart/i_tx/tickcntr_27" BEL
+        "i_uart/i_tx/tickcntr_26" BEL "i_uart/i_tx/tickcntr_25" BEL
+        "i_uart/i_tx/tickcntr_24" BEL "i_uart/i_tx/tickcntr_23" BEL
+        "i_uart/i_tx/tickcntr_22" BEL "i_uart/i_tx/tickcntr_21" BEL
+        "i_uart/i_tx/tickcntr_20" BEL "i_uart/i_tx/tickcntr_19" BEL
+        "i_uart/i_tx/tickcntr_18" BEL "i_uart/i_tx/tickcntr_17" BEL
+        "i_uart/i_tx/tickcntr_16" BEL "i_uart/i_tx/tickcntr_15" BEL
+        "i_uart/i_tx/tickcntr_14" BEL "i_uart/i_tx/tickcntr_13" BEL
+        "i_uart/i_tx/tickcntr_12" BEL "i_uart/i_tx/tickcntr_11" BEL
+        "i_uart/i_tx/tickcntr_10" BEL "i_uart/i_tx/tickcntr_9" BEL
+        "i_uart/i_tx/tickcntr_8" BEL "i_uart/i_tx/tickcntr_7" BEL
+        "i_uart/i_tx/tickcntr_6" BEL "i_uart/i_tx/tickcntr_5" BEL
+        "i_uart/i_tx/tickcntr_4" BEL "i_uart/i_tx/tickcntr_3" BEL
+        "i_uart/i_tx/tickcntr_2" BEL "i_uart/i_tx/tickcntr_1" BEL
+        "i_uart/i_tx/tickcntr_0" BEL "i_uart/i_tx/byte_2tx_7" BEL
+        "i_uart/i_tx/byte_2tx_6" BEL "i_uart/i_tx/byte_2tx_5" BEL
+        "i_uart/i_tx/byte_2tx_4" BEL "i_uart/i_tx/byte_2tx_3" BEL
+        "i_uart/i_tx/byte_2tx_2" BEL "i_uart/i_tx/byte_2tx_1" BEL
+        "i_uart/i_tx/byte_2tx_0" BEL "i_uart/i_tx/bit_2tx" BEL
+        "i_uart/i_brg/sample_counter_30" BEL "i_uart/i_brg/sample_counter_29"
+        BEL "i_uart/i_brg/sample_counter_28" BEL
+        "i_uart/i_brg/sample_counter_27" BEL "i_uart/i_brg/sample_counter_26"
+        BEL "i_uart/i_brg/sample_counter_25" BEL
+        "i_uart/i_brg/sample_counter_24" BEL "i_uart/i_brg/sample_counter_23"
+        BEL "i_uart/i_brg/sample_counter_22" BEL
+        "i_uart/i_brg/sample_counter_21" BEL "i_uart/i_brg/sample_counter_20"
+        BEL "i_uart/i_brg/sample_counter_19" BEL
+        "i_uart/i_brg/sample_counter_18" BEL "i_uart/i_brg/sample_counter_17"
+        BEL "i_uart/i_brg/sample_counter_16" BEL
+        "i_uart/i_brg/sample_counter_15" BEL "i_uart/i_brg/sample_counter_14"
+        BEL "i_uart/i_brg/sample_counter_13" BEL
+        "i_uart/i_brg/sample_counter_12" BEL "i_uart/i_brg/sample_counter_11"
+        BEL "i_uart/i_brg/sample_counter_10" BEL
+        "i_uart/i_brg/sample_counter_9" BEL "i_uart/i_brg/sample_counter_8"
+        BEL "i_uart/i_brg/sample_counter_7" BEL
+        "i_uart/i_brg/sample_counter_6" BEL "i_uart/i_brg/sample_counter_5"
+        BEL "i_uart/i_brg/sample_counter_4" BEL
+        "i_uart/i_brg/sample_counter_3" BEL "i_uart/i_brg/sample_counter_2"
+        BEL "i_uart/i_brg/sample_counter_1" BEL
+        "i_uart/i_brg/sample_counter_0" BEL "i_uart/i_brg/sample" BEL
+        "i_uart/i_rx/rx_Cstate_FSM_FFd1" BEL "i_uart/i_rx/rx_Cstate_FSM_FFd2"
+        BEL "i_uart/i_rx/bitcntr_2" BEL "i_uart/i_rx/bitcntr_1" BEL
+        "i_uart/i_rx/bitcntr_0" BEL "i_uart/i_rx/tickcntr_30" BEL
+        "i_uart/i_rx/tickcntr_29" BEL "i_uart/i_rx/tickcntr_28" BEL
+        "i_uart/i_rx/tickcntr_27" BEL "i_uart/i_rx/tickcntr_26" BEL
+        "i_uart/i_rx/tickcntr_25" BEL "i_uart/i_rx/tickcntr_24" BEL
+        "i_uart/i_rx/tickcntr_23" BEL "i_uart/i_rx/tickcntr_22" BEL
+        "i_uart/i_rx/tickcntr_21" BEL "i_uart/i_rx/tickcntr_20" BEL
+        "i_uart/i_rx/tickcntr_19" BEL "i_uart/i_rx/tickcntr_18" BEL
+        "i_uart/i_rx/tickcntr_17" BEL "i_uart/i_rx/tickcntr_16" BEL
+        "i_uart/i_rx/tickcntr_15" BEL "i_uart/i_rx/tickcntr_14" BEL
+        "i_uart/i_rx/tickcntr_13" BEL "i_uart/i_rx/tickcntr_12" BEL
+        "i_uart/i_rx/tickcntr_11" BEL "i_uart/i_rx/tickcntr_10" BEL
+        "i_uart/i_rx/tickcntr_9" BEL "i_uart/i_rx/tickcntr_8" BEL
+        "i_uart/i_rx/tickcntr_7" BEL "i_uart/i_rx/tickcntr_6" BEL
+        "i_uart/i_rx/tickcntr_5" BEL "i_uart/i_rx/tickcntr_4" BEL
+        "i_uart/i_rx/tickcntr_3" BEL "i_uart/i_rx/tickcntr_2" BEL
+        "i_uart/i_rx/tickcntr_1" BEL "i_uart/i_rx/tickcntr_0" BEL
+        "i_uart/i_rx/rxd_byte_7" BEL "i_uart/i_rx/rxd_byte_6" BEL
+        "i_uart/i_rx/rxd_byte_5" BEL "i_uart/i_rx/rxd_byte_4" BEL
+        "i_uart/i_rx/rxd_byte_3" BEL "i_uart/i_rx/rxd_byte_2" BEL
+        "i_uart/i_rx/rxd_byte_1" BEL "i_uart/i_rx/rxd_byte_0" BEL
+        "i_uart/wr_en" BEL "i_uart/i_tx/tickcntr_31_C_31" BEL
+        "i_uart/i_tx/tickcntr_31_P_31" BEL
+        "i_uart/i_brg/sample_counter_31_C_31" BEL
+        "i_uart/i_brg/sample_counter_31_P_31" BEL
+        "i_uart/i_rx/tickcntr_31_C_31" BEL "i_uart/i_rx/tickcntr_31_P_31" BEL
+        "sys_clk_BUFGP/BUFG" BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_7"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_6"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_5"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_4"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_3"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0"
+        PIN
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<26>"
+        PIN
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<27>"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_9"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_8"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_6"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_5"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_7"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_3"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_4"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_0"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_8"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_7"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_6"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_9"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_8"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_6"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_5"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_7"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_3"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_4"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_0"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_9"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_8"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_7"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_6"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_5"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_4"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_3"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_2"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_1"
+        BEL
+        "i_uart/i_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_0";
+TS_clk = PERIOD TIMEGRP "fx2Clk_in" 20 ns HIGH 50%;
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

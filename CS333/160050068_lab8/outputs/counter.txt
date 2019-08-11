@@ -1,0 +1,21 @@
+$ counter 1
+
+Counter without lock 
+Data[0] = 12559
+
+$ counter 2
+
+Counter with mutex lock 
+Data[0] = 20000
+
+$ counter 1
+
+Counter without lock 
+Data[0] = 13634
+
+$ counter 2
+
+Counter with mutex lock 
+Data[0] = 20000
+
+$

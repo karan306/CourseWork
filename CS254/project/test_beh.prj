@@ -1,0 +1,6 @@
+vhdl work "seven_seg.vhdl"
+vhdl work "harness.vhdl"
+vhdl work "comm_fpga_fx2.vhdl"
+vhdl work "cksum_rtl.vhdl"
+vhdl work "top_level.vhdl"
+vhdl work "test.vhd"

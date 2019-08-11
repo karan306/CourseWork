@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/nikhilsamrat/fpgalink/test_isim_beh.exe" -prj "/home/nikhilsamrat/fpgalink/test_beh.prj" "work.test" 

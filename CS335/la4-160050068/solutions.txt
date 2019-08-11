@@ -1,0 +1,58 @@
+Name: Karan Kumar
+Roll number: 160050068
+========================================
+
+
+================
+     TASK 2
+================
+
+
+1. Run your code on datasets/garden.csv, with different values of k. Looking at the performance plots, does the SSE of k-means algorithm ever increase as the iterations are made? (1 mark)
+Answer: 
+No the SSE never increases with the iterations as was proved in the class. The clustering to which a point belongs is updated only when the squared difference with the mean is less than before. And also the least SSE is obtained when the cluster centre is the mean. Hence the mean updation can also not increase the SSE.
+
+3. Look at the files 3lines.png and mouse.png. Manually draw cluster boundaries around the 3 clusters visible in each file (no need to submit the hand drawn clusters). Test the k-means algorithm on the datasets datasets/3lines.csv and datasets/mouse.csv. How does the algorithm’s clustering compare with the clustering you would do by hand? Why do you think this happens? (1 mark)
+Answer: 
+The algorithm's clustering is as expected for mouse.png . But for 3lines.png the clustering is very different. Also for different seed values, the shapes of clusters are also different(for 3lines.csv). For mouse.png, irrespective of the initialization(i.e. the seed value used), the clustering obtianed is always similar and the centres can be seen to move towards their respective expected positions. The reason why clustering for 3lines.csv is not as expected is that the points on the same line can be very far and may be closer to some points on the other line. Therefore, the initialization plays an important role.
+
+
+
+================
+     TASK 3
+================
+
+1. For each dataset, with kmeansplusplus initialization algorithm, report “average SSE” and "average iterations". Explain the results. (2 mark)
+Answer: 
+kmeans++ is better than kmeans in terms of both SSE and Avg. no. of iterations. This is because the initialization of kmeans++ is a much better representation of the actual optimal cluster(thus taking fewer iterations to converge and also having a smaller SSE to start with). Thus it gives kmeans++ a great headstart. Also kmeans has great dependency on the initialization it gets and as k incresases, it becomes evident that the Average SSE is much larger for it along with the average iterations. For kmeans++ the SSE for the initialization only is very low, thus, giving lower SSE values in further iterations.
+
+Dataset     |  Initialization | Average SSE  | Average Iterations
+==================================================================
+   100.csv  |        forgy    |      8472.63|       2.43
+   100.csv  |        kmeans++ |      8472.63|       2.0
+  1000.csv  |        forgy    |  21337462.29|       3.28
+  1000.csv  |        kmeans++ |  19887301.00|       3.16
+ 10000.csv  |        forgy    | 168842238.61|       21.1
+ 10000.csv  |        kmeans++ |  22323178.86|       7.5
+
+
+================
+  TASK 4
+================
+
+1. Can you observe from the visualization that k-medians algorithm is more robust to outliers as compared to k-means? Why do you think this happens? (1.5 marks)
+Answer: 
+As can be observed from the plots and the values of the SSE, the k-medians algorithm is more robust to outliers, that is, the cluster centre and the SSE values do not get affected much in presence of outliers. While for k-means, we can see from the plots that the cluster centres can be well away from their clusters due to outliers. The reason why this happens is that if all values are small and an outlier with a very large value is there, the mean will also become large. But the median will still be very close to the original value as the outlier will be one of the ends of the list on sorting, having no great effect on median(apart from shifting it slightly by changing the number of data points). The median will still be inside the original cluster.
+
+================
+  TASK 8
+================
+
+1. What do you observe as we reduce the number of clusters (k)? Answer in reference to the quality of decompressed image. (0.5 mark)
+Answer:
+The quality of the image decreases. More precisely, the contrast in the image decreases as k is decreased as the no. of different colors in the decompressed image is only k.
+
+
+2. You can observe that for the small number of clusters, the degree of compression (original size/compressed size) is about the same as that of when we use larger number of clusters even though we need to store lesser number of colors. Can you tell why? How can we increase this ratio in case of smaller number of clusters? [1 mark]
+Answer: 
+Degree of compression is almost the same for say k=63 and k=48 as both have 1 as their most significant bit, which is why for both we need 6 bits to store the cluster number for each data point. Hence we will need the same amount of space to save them irrespective of the format. We can increase this ratio(Degree of compression) in case of smaller number of clusters if the number of clusters can be represented in fewer number of bits. For example, if k=4 we can represent each cluster with two bits and therefore each byte of the compressed file will have four data points. Thus the ratio will improve to three times of the original. But again the loss in quality of the image will be much greater.

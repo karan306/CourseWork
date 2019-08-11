@@ -1,0 +1,51 @@
+
+Release 14.7 SmartXplorer
+Copyright(c) 1995-2010 Xilinx, Inc. All rights reserved.
+smartxplorer -p xc6slx45-csg324-3 -b -wd smartxplorer_results top_level.ngd -to "-v 3 -s 3 -n 3 -fastpaths -xml top_level.twx -ucf board.ucf" -max_runs 7
+
+SmartXplorer Settings: 
+
+designName=/home/nikhilsamrat/fpgalink/top_level.ngd 
+write_dir=/home/nikhilsamrat/fpgalink/smartxplorer_results 
+host_list=None 
+part=xc6slx45-csg324-3 
+strategy_file=None 
+notify=None 
+source_dir=/home/nikhilsamrat/fpgalink 
+batch_mode=True 
+run_all_strategies=False 
+list_all_strategies=False 
+remote_command=rsh
+area_report="lut;slice_reg"
+power_options=off
+trce_options="-v 3 -s 3 -n 3 -fastpaths -xml top_level.twx -ucf board.ucf"
+max_runs=7
+
+WARNING: No host list file specified. Using only local machine.
+Starting SmartXplorer...
+See file 'smartxplorer.html' for real-time report.
+
+
+Running SmartXplorer strategies...
+
+
+
+INFO: Timing Met... Stopping remaining jobs
+######################################################################
+ BestStrategy : MapRunTime
+######################################################################
+ Run index                           : run1
+ Map options                         : -ol high -w 
+ Par options                         : -ol high 
+ Number of Luts                      : 497 (1%)
+ Number of Slice Registers           : 314 (1%)
+ Achieved Timing Score               : 0
+ Worst Case Slack                : 8.595ns
+
+######################################################################
+
+Total Real Time:68.5(secs)
+SmartXplorer Done
+
+
+SmartXplorer Done. See file 'smartxplorer.txt' for detailed report.

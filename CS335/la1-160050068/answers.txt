@@ -1,0 +1,62 @@
+Task 2:
+
+    1.  As seen from the graph, both the training and test accuracy seem to increase 
+        with number of data points seen (which is quite obvious) with minor fluctutations
+        (which could be due to a different part of data set chosen for training and 
+        testing, when increased the number of samples).
+            At the beginning the increase in accuracy with number of data points seen,
+        is quite significant while later it becomes almost constant, though there is 
+        some movement upwards on the graph. This observation simply implies that as the 
+        perceptron sees more points it is able to generalize better.
+            Also the training accuracy was more than the test accuracy as the weights are
+        set based on the training data points seen and not the test data points
+            Also one notable fact is that the fluctutation of test accuracy is somewhat
+        greater than of training accuracy. This may have happened because the new 
+        training data points added may not resemble with the test data points in 
+        terms of their distribution.
+
+    2.  As seen from the graph, the training accuracy decreases with the size of the
+        training set while the test accuracy increases. This is because the with smaller
+        training set, fewer iterations are needed to tune the weights according to the
+        training data. On the contrary, since the perceptron sees more data it is able to
+        generalize better thus increasing the test accuracy.
+            When very few data points are seen, the classifier is not able to classify unseen
+        points poperly so the the test accuracy is very low in the beginning.
+
+
+    Additional task:
+    In absence of data points, it is very hard to comment on the expected accuracy. Such
+    a classifier will make predictions based on the initial weights. The accuracy 
+    will solely depend on the initialization of weights as there are no changes made
+    to the weights in absence of data points.
+
+-----------------------------------------------------------------------------------------------
+
+Task 3.1:
+    With 800 data points:
+    perceptron1vr : python dataClassifier.py -c 1vr -t 800 -s 8000 --> 71.3% accuracy
+    perceptron1v1 : python dataClassifier.py -c 1v1 -t 800 -s 8000 --> 71.5% accuracy
+
+    With only 800 data points seen both perceptrons give similar accuracies as they both are
+    not able to generalize that well and hence have lower accuracies.
+
+
+    With 8000 data points:
+    perceptron1vr : python dataClassifier.py -c 1vr -t 8000 -s 20000 --> 73.8% accuracy
+    perceptron1v1 : python dataClassifier.py -c 1v1 -t 8000 -s 20000 --> 78.8% accuracy
+
+    With more data points, both perceptrons have higher accuracies as they become more general
+    having seen more points. Also perceptron1v1 performs better than perceptron1vr. This is 
+    because with 1v1 we see if the perceptron has classified correctly while in 1vr we deal with
+    scores to check which perceptron best depicts the data which is not as reliable.
+
+Task 4:
+    I tried with many features such as perimeter and area of the figure, if the figure is a star,
+    minimun and max distance from centroid, and data corresponding to distribution of black pixels
+    in each row or column such as mean and standard deviation and used them with various combinations.
+    Currently I have got accuracy of 87.5% from 3 features: perimeter, area and whether the figure 
+    is a star or not. For a star, there must be a column or a row with 4 changes in the color of 
+    adjacent pixels while for others there can be only 2.
+
+    
+

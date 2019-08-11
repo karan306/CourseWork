@@ -1,0 +1,15 @@
+Task 3:
+
+No, we cannot implement A-star search for this problem because:
+a)The path cost is not well known for this problem as there is no simple idea of cost related to going to one configuration from the other.
+b)The heuristic function is also not very easy to come up with given that there is no idea of cost function. Thus we can't make an estimate of the cost to final configuration from a given configuration which is the heuristic.
+
+
+-------------------------------------------
+
+
+Task 7:
+
+1) The number of nodes visited in case we used a simple Shortest Path Problem Algorithm like Dijikstra's is the same as in task 5 where we used a null heuristic. It is more than the number of nodes visited with A* search with the heuristic function used as in task 6. This is because in A* search with a heuristic, we also keep an estimate of the future thus expanding nodes which can be optimal for reaching the final goal.
+
+2)	In this case, we can take our heuristic function as minimum of distances from the remaining goal states that have not been visited. This heuristic function is also consistent. The proof is as follows: If we are going from n1 to n2,we need to show that h(n1)<=c(n2,n1)+h(n2) {Lets call this inequality I1}. Now if the minimum for distance for both n1 and n2 were obtained for the same goal state G, then I1 holds due to traingle inequality as h(n1) and h(n2) are the distances of G from n1 and n2. If the minimum for h for n1 and n2 were obtained for different Goals say G1 and G2 repectively, then we need to show that distance(n1,G1)<=c(n2,n1)+distance(n2,G2). This is true because, distance(n1,G2)<=c(n2,n1)+distance(n2,G2) (by triangle inequality)and distance(n1,G1)<distance(n1,G2) (by the definition of h, otherwise for n1 distance would be minimum for G2). Therefore this heuristic is consistent.

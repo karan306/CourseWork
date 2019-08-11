@@ -1,0 +1,375 @@
+turtle > ls
+a.out  dup.c  make-tokens.c  pipes.c  turtle2.c  turtle.c
+turtle > ps 
+  PID TTY          TIME CMD
+ 7185 pts/0    00:00:00 bash
+ 7563 pts/0    03:35:57 a.out
+13959 pts/0    00:00:00 a.out
+13966 pts/0    00:00:00 ps
+turtle > ps -aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 225640  7252 ?        Ss   Jul28   0:29 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    Jul28   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   Jul28   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    Jul28   0:01 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    Jul28   0:52 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    Jul28   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    Jul28   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    Jul28   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    Jul28   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    Jul28   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    Jul28   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    Jul28   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    Jul28   0:01 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    Jul28   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S    Jul28   0:00 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    Jul28   0:00 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    Jul28   0:20 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    Jul28   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S    Jul28   0:00 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S    Jul28   0:00 [migration/3]
+root        28  0.0  0.0      0     0 ?        S    Jul28   0:01 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S    Jul28   0:00 [kdevtmpfs]
+root        32  0.0  0.0      0     0 ?        I<   Jul28   0:00 [netns]
+root        33  0.0  0.0      0     0 ?        S    Jul28   0:00 [rcu_tasks_kthre]
+root        34  0.0  0.0      0     0 ?        S    Jul28   0:00 [kauditd]
+root        37  0.0  0.0      0     0 ?        S    Jul28   0:00 [khungtaskd]
+root        38  0.0  0.0      0     0 ?        S    Jul28   0:00 [oom_reaper]
+root        39  0.0  0.0      0     0 ?        I<   Jul28   0:00 [writeback]
+root        40  0.0  0.0      0     0 ?        S    Jul28   0:00 [kcompactd0]
+root        41  0.0  0.0      0     0 ?        SN   Jul28   0:00 [ksmd]
+root        42  0.0  0.0      0     0 ?        SN   Jul28   0:00 [khugepaged]
+root        43  0.0  0.0      0     0 ?        I<   Jul28   0:00 [crypto]
+root        44  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kintegrityd]
+root        45  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kblockd]
+root        48  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ata_sff]
+root        49  0.0  0.0      0     0 ?        I<   Jul28   0:00 [md]
+root        50  0.0  0.0      0     0 ?        I<   Jul28   0:00 [edac-poller]
+root        51  0.0  0.0      0     0 ?        I<   Jul28   0:00 [devfreq_wq]
+root        52  0.0  0.0      0     0 ?        I<   Jul28   0:00 [watchdogd]
+root        55  0.0  0.0      0     0 ?        S    Jul28   0:13 [kswapd0]
+root        56  0.0  0.0      0     0 ?        S    Jul28   0:00 [ecryptfs-kthrea]
+root        98  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kthrotld]
+root        99  0.0  0.0      0     0 ?        I<   Jul28   0:00 [acpi_thermal_pm]
+root       104  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ipv6_addrconf]
+root       114  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kstrp]
+root       135  0.0  0.0      0     0 ?        I<   Jul28   0:00 [charger_manager]
+root       182  0.0  0.0      0     0 ?        S    Jul28   0:00 [scsi_eh_0]
+root       183  0.0  0.0      0     0 ?        I<   Jul28   0:00 [scsi_tmf_0]
+root       184  0.0  0.0      0     0 ?        S    Jul28   0:00 [scsi_eh_1]
+root       185  0.0  0.0      0     0 ?        I<   Jul28   0:00 [scsi_tmf_1]
+root       187  0.0  0.0      0     0 ?        I<   Jul28   0:00 [nvkm-disp]
+root       189  0.0  0.0      0     0 ?        S    Jul28   0:21 [i915/signal:0]
+root       190  0.0  0.0      0     0 ?        S    Jul28   0:00 [i915/signal:1]
+root       191  0.0  0.0      0     0 ?        S    Jul28   0:00 [i915/signal:2]
+root       192  0.0  0.0      0     0 ?        S    Jul28   0:00 [i915/signal:4]
+root       195  0.0  0.0      0     0 ?        I<   Jul28   0:01 [kworker/2:1H]
+root       198  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/0:1H]
+root       201  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ttm_swap]
+root       220  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/1:1H]
+root       223  0.0  0.0      0     0 ?        D    Jul28   0:05 [jbd2/sda9-8]
+root       224  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ext4-rsv-conver]
+root       258  0.0  1.4 527720 117952 ?       S<s  Jul28   1:12 /lib/systemd/systemd-journald
+root       269  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kworker/3:1H]
+root       285  0.0  0.0  47416  3428 ?        Ss   Jul28   0:00 /lib/systemd/systemd-udevd
+root       307  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop0]
+root       308  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop1]
+root       309  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop2]
+root       310  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop3]
+root       311  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop4]
+root       312  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop5]
+root       313  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop6]
+root       314  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop7]
+root       315  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop8]
+root       316  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop9]
+root       317  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop10]
+root       318  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop11]
+root       319  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop12]
+root       320  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop13]
+root       321  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop14]
+root       322  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop15]
+root       323  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop16]
+root       324  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop17]
+root       325  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop18]
+root       326  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop19]
+root       327  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop20]
+root       358  0.0  0.0      0     0 ?        S    Jul28   0:50 [irq/109-FTE1001]
+root       369  0.0  0.0      0     0 ?        I<   Jul28   0:00 [cfg80211]
+root       372  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ath10k_wq]
+root       373  0.0  0.0      0     0 ?        I<   Jul28   0:00 [ath10k_aux_wq]
+root       374  0.0  0.0      0     0 ?        I<   Jul28   0:00 [asus_wireless_w]
+root       411  0.0  0.0      0     0 ?        I<   Jul28   0:00 [kmemstick]
+root       412  0.0  0.0      0     0 ?        I    Jul28   0:08 [rtsx_usb_ms_1]
+root       438  0.0  0.0      0     0 ?        I<   Jul28   0:00 [led_workqueue]
+systemd+   612  0.0  0.0  70872  4108 ?        Ss   Jul28   0:05 /lib/systemd/systemd-resolved
+systemd+   613  0.0  0.0 146092  1500 ?        Ssl  Jul28   0:00 /lib/systemd/systemd-timesyncd
+root       707  0.0  0.0 186952  5492 ?        Ssl  Jul28   0:07 /usr/sbin/thermald --no-daemon --dbu
+root       709  0.0  0.1 503924  9644 ?        Ssl  Jul28   0:10 /usr/lib/udisks2/udisksd
+root       710  0.0  0.0   4552   724 ?        Ss   Jul28   0:01 /usr/sbin/acpid
+root       711  0.0  0.0 110476  3216 ?        Ssl  Jul28   0:06 /usr/sbin/irqbalance --foreground
+root       713  0.0  0.0 294732  6892 ?        Ssl  Jul28   0:07 /usr/lib/accountsservice/accounts-da
+root       716  0.0  0.0  70712  4424 ?        Ss   Jul28   0:01 /lib/systemd/systemd-logind
+syslog     717  0.0  0.0 338912  6132 ?        Ssl  Jul28   1:07 /usr/sbin/rsyslogd -n
+root       718  0.0  0.0  36476  3488 ?        Ss   Jul28   0:00 /usr/lib/bluetooth/bluetoothd
+root       721  0.0  0.0 427312  5724 ?        Ssl  Jul28   0:00 /usr/sbin/ModemManager
+message+   723  0.0  0.0  51820  5520 ?        Ss   Jul28   0:45 /usr/bin/dbus-daemon --system --addr
+root       744  0.0  0.1 773196 13072 ?        Ssl  Jul28   0:23 /usr/sbin/NetworkManager --no-daemon
+root       746  0.0  0.0  45264  6996 ?        Ss   Jul28   0:01 /sbin/wpa_supplicant -u -s -O /run/w
+avahi      748  0.0  0.0  47532  3880 ?        Ss   Jul28   0:14 avahi-daemon: running [karan.local]
+root       749  0.0  0.0 177692  5292 ?        Ssl  Jul28   0:00 /usr/bin/python3 /usr/bin/networkd-d
+root       750  0.0  0.0  38428  2584 ?        Ss   Jul28   0:00 /usr/sbin/cron -f
+root       756  0.0  0.1 1362160 12544 ?       Ssl  Jul28   0:06 /usr/lib/snapd/snapd
+avahi      826  0.0  0.0  47076    64 ?        S    Jul28   0:00 avahi-daemon: chroot helper
+root       868  0.0  0.1 303332  8188 ?        Ssl  Jul28   0:04 /usr/lib/policykit-1/polkitd --no-de
+root       889  0.0  0.0  72296  5788 ?        Ss   Jul28   0:00 /usr/sbin/sshd -D
+whoopsie   995  0.0  0.1 464316  9184 ?        Ssl  Jul28   0:00 /usr/bin/whoopsie -f
+kernoops   999  0.0  0.0  56932    76 ?        Ss   Jul28   0:05 /usr/sbin/kerneloops --test
+kernoops  1001  0.0  0.0  56932    76 ?        Ss   Jul28   0:05 /usr/sbin/kerneloops
+root      1064  0.0  0.0  61812  1308 ?        Ss   Jul28   0:00 /bin/systemd-tty-ask-password-agent 
+root      1066  0.0  0.0 308176  5948 ?        Ssl  Jul28   0:00 /usr/sbin/gdm3
+root      1071  0.0  0.0 261548  5144 ?        Sl   Jul28   0:00 gdm-session-worker [pam/gdm-launch-e
+gdm       1080  0.0  0.0  77136  5048 ?        Ss   Jul28   0:00 /lib/systemd/systemd --user
+gdm       1081  0.0  0.0 261716   636 ?        S    Jul28   0:00 (sd-pam)
+gdm       1092  0.0  0.0 197792  4244 tty1     Ssl+ Jul28   0:00 /usr/lib/gdm3/gdm-wayland-session gn
+gdm       1094  0.0  0.0  50256  3592 ?        Ss   Jul28   0:00 /usr/bin/dbus-daemon --session --add
+gdm       1096  0.0  0.0 558940  7772 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-session/gnome-session
+gdm       1102  0.1  0.8 3436212 70136 tty1    Sl+  Jul28   3:39 /usr/bin/gnome-shell
+root      1109  0.0  0.0 322672  7268 ?        Ssl  Jul28   0:03 /usr/lib/upower/upowerd
+gdm       1125  0.0  0.1 540084 10572 tty1     Sl+  Jul28   0:00 /usr/bin/Xwayland :1024 -rootless -t
+gdm       1132  0.0  0.0 349268  4776 ?        Ssl  Jul28   0:00 /usr/lib/at-spi2-core/at-spi-bus-lau
+gdm       1137  0.0  0.0  49924  3232 ?        S    Jul28   0:00 /usr/bin/dbus-daemon --config-file=/
+gdm       1139  0.0  0.0 220760  4308 ?        Sl   Jul28   0:00 /usr/lib/at-spi2-core/at-spi2-regist
+gdm       1143  0.0  0.0 1415684 6096 ?        Ssl  Jul28   0:00 /usr/bin/pulseaudio --daemonize=no
+rtkit     1144  0.0  0.0 183504  2692 ?        SNsl Jul28   0:00 /usr/lib/rtkit/rtkit-daemon
+gdm       1158  0.0  0.0 361356  5228 tty1     Sl   Jul28   0:00 ibus-daemon --xim --panel disable
+gdm       1161  0.0  0.0 280608  4156 tty1     Sl   Jul28   0:00 /usr/lib/ibus/ibus-dconf
+gdm       1163  0.0  0.1 402476 15432 tty1     Sl   Jul28   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm       1166  0.0  0.0 278552  4260 ?        Sl   Jul28   0:00 /usr/lib/ibus/ibus-portal
+root      1178  0.0  0.0 296804  5280 ?        Ssl  Jul28   0:00 /usr/lib/x86_64-linux-gnu/boltd
+root      1179  0.0  0.4 448520 37288 ?        Ssl  Jul28   0:10 /usr/lib/packagekit/packagekitd
+gdm       1180  0.0  0.1 553008 15836 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-x
+gdm       1183  0.0  0.0 278148  4468 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-a
+gdm       1185  0.0  0.1 402108 15004 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-c
+gdm       1188  0.0  0.2 726656 19820 tty1     Sl+  Jul28   0:13 /usr/lib/gnome-settings-daemon/gsd-c
+gdm       1189  0.0  0.0 393724  7460 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-d
+gdm       1190  0.0  0.0 283732  4560 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-h
+gdm       1191  0.0  0.1 556492 15204 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-k
+gdm       1194  0.0  0.2 925312 16096 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-m
+gdm       1199  0.0  0.0 201992  3480 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-m
+gdm       1200  0.0  0.2 856888 18404 tty1     Sl+  Jul28   0:01 /usr/lib/gnome-settings-daemon/gsd-p
+gdm       1201  0.0  0.0 267000  6176 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-p
+gdm       1204  0.0  0.0 202012  3580 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-r
+gdm       1206  0.0  0.0 275728  3768 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+gdm       1212  0.0  0.0 305096  5652 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+gdm       1214  0.0  0.0 377924  4632 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+gdm       1217  0.0  0.0 332848  5036 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+gdm       1221  0.0  0.2 487252 16784 tty1     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-w
+gdm       1236  0.0  0.0 204884  5132 tty1     Sl   Jul28   0:00 /usr/lib/ibus/ibus-engine-simple
+colord    1268  0.0  0.1 324988 12512 ?        Ssl  Jul28   0:00 /usr/lib/colord/colord
+root      1296  0.0  0.0 415464  7332 ?        Sl   Jul28   0:00 gdm-session-worker [pam/gdm-password
+karan     1300  0.0  0.0  77224  6436 ?        Ss   Jul28   0:01 /lib/systemd/systemd --user
+karan     1301  0.0  0.0 261716  1720 ?        S    Jul28   0:00 (sd-pam)
+karan     1314  0.0  0.1 364468  9692 ?        SLl  Jul28   0:19 /usr/bin/gnome-keyring-daemon --daem
+karan     1318  0.0  0.0 212124  5332 tty2     Ssl+ Jul28   0:00 /usr/lib/gdm3/gdm-x-session --run-sc
+karan     1320  0.5  2.0 635952 165804 tty2    Sl+  Jul28  18:50 /usr/lib/xorg/Xorg vt2 -displayfd 3 
+karan     1324  0.0  0.1  54200  8036 ?        Ss   Jul28   0:10 /usr/bin/dbus-daemon --session --add
+karan     1327  0.0  0.1 567768 10224 tty2     Sl+  Jul28   0:02 /usr/lib/gnome-session/gnome-session
+karan     1420  0.0  0.0  11304   320 ?        Ss   Jul28   0:00 /usr/bin/ssh-agent /usr/bin/im-launc
+karan     1422  0.0  0.0 349296  5212 ?        Ssl  Jul28   0:00 /usr/lib/at-spi2-core/at-spi-bus-lau
+karan     1427  0.0  0.0  50052  3760 ?        S    Jul28   0:00 /usr/bin/dbus-daemon --config-file=/
+karan     1430  0.0  0.0 220784  5900 ?        Sl   Jul28   0:07 /usr/lib/at-spi2-core/at-spi2-regist
+karan     1446  1.1  2.6 3624140 205988 tty2   Sl+  Jul28  37:57 /usr/bin/gnome-shell
+karan     1452  0.0  0.0 292060  5764 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfsd
+karan     1457  0.0  0.0 416108  4372 ?        Sl   Jul28   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1
+karan     1468  0.3  0.1 2220904 11664 ?       Sl   Jul28  11:56 /usr/bin/pulseaudio --start --log-ta
+root      1472  0.0  0.0      0     0 ?        S<   Jul28   0:00 [krfcommd]
+karan     1484  0.0  0.1 442932 14920 tty2     Sl   Jul28   0:29 ibus-daemon --xim --panel disable
+karan     1488  0.0  0.0 280748  5224 tty2     Sl   Jul28   0:00 /usr/lib/ibus/ibus-dconf
+karan     1492  0.0  0.1 344060 12480 tty2     Sl   Jul28   0:02 /usr/lib/ibus/ibus-x11 --kill-daemon
+karan     1495  0.0  0.0 278684  4896 ?        Sl   Jul28   0:00 /usr/lib/ibus/ibus-portal
+karan     1504  0.0  0.1 689636 10620 ?        Sl   Jul28   0:00 /usr/lib/gnome-shell/gnome-shell-cal
+karan     1512  0.0  0.0 188032  5316 ?        Sl   Jul28   0:00 /usr/lib/dconf/dconf-service
+karan     1515  0.0  0.0 380292  6964 ?        Ssl  Jul28   0:04 /usr/lib/gvfs/gvfs-udisks2-volume-mo
+karan     1519  0.0  0.0 378808  6540 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfs-afc-volume-monito
+karan     1524  0.0  0.0 288652  5720 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-mo
+karan     1528  0.0  0.0 274040  4968 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfs-goa-volume-monito
+karan     1532  0.0  0.1 101434788 13376 ?     Sl   Jul28   0:00 /usr/lib/gnome-online-accounts/goa-d
+karan     1536  0.0  0.1 1437692 13564 ?       Ssl  Jul28   0:00 /usr/lib/evolution/evolution-source-
+karan     1550  0.0  0.0 303352  5036 ?        Sl   Jul28   0:00 /usr/lib/gnome-online-accounts/goa-i
+karan     1555  0.0  0.0 275864  5300 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monito
+karan     1559  0.0  0.2 798344 18880 tty2     Sl+  Jul28   0:02 /usr/lib/gnome-settings-daemon/gsd-p
+karan     1560  0.0  0.1 349312  8484 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-p
+karan     1562  0.0  0.0 423340  5004 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-r
+karan     1563  0.0  0.0 275728  4368 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+karan     1568  0.0  0.1 452960  8304 tty2     Sl+  Jul28   0:08 /usr/lib/gnome-settings-daemon/gsd-s
+karan     1575  0.0  0.0 377928  5528 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+karan     1579  0.0  0.0 332852  6004 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-s
+karan     1581  0.0  0.1 494600 14028 tty2     Sl+  Jul28   0:07 /usr/lib/gnome-settings-daemon/gsd-x
+karan     1585  0.0  0.1 428552 14464 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-w
+karan     1595  0.0  0.0 278156  4908 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-a
+karan     1597  0.0  0.2 668212 16544 tty2     Sl+  Jul28   0:14 /usr/lib/gnome-settings-daemon/gsd-c
+karan     1598  0.0  0.1 343680 12024 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-c
+karan     1604  0.0  0.0 364972  6020 tty2     Sl+  Jul28   0:04 /usr/lib/gnome-settings-daemon/gsd-h
+karan     1606  0.0  0.1 469756  9004 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-d
+karan     1609  0.0  0.1 1204496 14280 tty2    Sl+  Jul28   0:01 /usr/lib/gnome-settings-daemon/gsd-m
+karan     1611  0.0  0.1 497792 12876 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-k
+karan     1615  0.0  0.0 278160  4792 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-m
+karan     1638  0.0  0.1 508752  9448 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-settings-daemon/gsd-p
+karan     1657  0.0  0.6 1043848 49236 tty2    Sl+  Jul28   0:09 nautilus-desktop
+karan     1659  0.0  0.0 271928  5956 tty2     Sl+  Jul28   0:00 /usr/lib/gnome-disk-utility/gsd-disk
+karan     1664  0.0  1.9 1392780 155464 tty2   SLl+ Jul28   0:06 /usr/bin/gnome-software --gapplicati
+karan     1671  0.0  0.6 891476 48932 ?        Ssl  Jul28   0:00 /usr/lib/evolution/evolution-calenda
+karan     1675  0.0  0.0 204880  5212 tty2     Sl   Jul28   0:07 /usr/lib/ibus/ibus-engine-simple
+karan     1689  0.0  0.0 368248  5720 ?        Sl   Jul28   0:00 /usr/lib/gvfs/gvfsd-trash --spawner 
+karan     1713  0.0  0.5 1135204 46484 ?       Sl   Jul28   0:00 /usr/lib/evolution/evolution-calenda
+karan     1726  0.0  0.1 732688 11364 ?        Ssl  Jul28   0:00 /usr/lib/evolution/evolution-address
+karan     1739  0.0  0.1 943460 11864 ?        Sl   Jul28   0:00 /usr/lib/evolution/evolution-address
+root      1755  0.0  0.1 556868 14176 ?        Ssl  Jul28   0:02 /usr/lib/fwupd/fwupd
+karan     1766  0.0  0.0 204716  5388 ?        Ssl  Jul28   0:00 /usr/lib/gvfs/gvfsd-metadata
+karan     1771  1.4  3.4 1650956 276660 tty2   SLl+ Jul28  50:36 /opt/google/chrome/chrome
+karan     1777  0.0  0.0  14716   348 tty2     S+   Jul28   0:00 cat
+karan     1778  0.0  0.0  14716   380 tty2     S+   Jul28   0:00 cat
+karan     1799  0.0  0.3 426116 26396 tty2     S+   Jul28   0:00 /opt/google/chrome/chrome --type=zyg
+karan     1807  0.0  0.0  26540  3332 tty2     S+   Jul28   0:00 /opt/google/chrome/nacl_helper
+karan     1810  0.0  0.1 426116 13368 tty2     S+   Jul28   0:01 /opt/google/chrome/chrome --type=zyg
+karan     1850  0.7  2.0 677756 163264 tty2    Sl+  Jul28  25:00 /proc/self/exe --type=gpu-process --
+karan     1852  0.0  0.1 461928 14196 tty2     S+   Jul28   0:00 /proc/self/exe --type=gpu-process --
+karan     2062  0.0  2.0 1268184 163312 tty2   Sl+  Jul28   2:48 /opt/google/chrome/chrome --type=ren
+karan     2081  0.0  1.4 1206664 116572 tty2   Sl+  Jul28   1:32 /opt/google/chrome/chrome --type=ren
+karan     2097  0.0  1.8 1242996 143100 tty2   Sl+  Jul28   1:23 /opt/google/chrome/chrome --type=ren
+karan     2105  0.0  0.8 1083624 65396 tty2    Sl+  Jul28   0:02 /opt/google/chrome/chrome --type=ren
+karan     2230  0.0  1.1 1129988 87728 tty2    Sl+  Jul29   0:03 /opt/google/chrome/chrome --type=ren
+karan     2394  0.0  1.2 1146420 99672 tty2    Sl+  Jul28   0:26 /opt/google/chrome/chrome --type=ren
+karan     2409  0.0  1.2 1170548 98800 tty2    Sl+  Jul28   0:02 /opt/google/chrome/chrome --type=ren
+karan     2411  0.3  2.7 1458016 217372 tty2   Sl+  Jul28  11:44 /opt/google/chrome/chrome --type=ren
+karan     2521  0.0  0.9 1108224 78640 tty2    Sl+  Jul28   0:02 /opt/google/chrome/chrome --type=ren
+karan     2638  0.0  1.2 1135880 99192 tty2    Sl+  Jul28   0:16 /opt/google/chrome/chrome --type=ren
+karan     2688  0.0  0.2 668752 17788 tty2     Sl+  Jul28   0:01 update-notifier
+karan     2879  0.0  0.1 101448144 14492 tty2  Sl+  Jul28   0:00 /usr/lib/deja-dup/deja-dup-monitor
+karan     3097  0.0  0.0 444120  5620 ?        Sl   Jul28   0:00 /usr/lib/gvfs/gvfsd-network --spawne
+karan     3120  0.0  0.0 381280  5816 ?        Sl   Jul28   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner 
+karan     3129  0.1  2.3 1324896 188888 tty2   Sl+  Jul29   1:31 /opt/google/chrome/chrome --type=ren
+karan     3308  0.0  2.6 1295992 206308 tty2   Sl+  00:00   1:01 /opt/google/chrome/chrome --type=ren
+karan     3321  0.0  0.7 1074548 60576 tty2    Sl+  00:00   0:00 /opt/google/chrome/chrome --type=ren
+karan     3635  0.0  2.6 1318768 213480 tty2   Sl+  Jul28   2:02 /opt/google/chrome/chrome --type=ren
+karan     3675  0.0  0.7 1074548 57944 tty2    Sl+  Jul28   0:01 /opt/google/chrome/chrome --type=ren
+karan     3948  0.0  1.3 1172400 105612 tty2   Sl+  00:20   0:01 /opt/google/chrome/chrome --type=ren
+karan     4240  0.0  4.6 1496372 369648 tty2   Sl+  00:32   1:20 /opt/google/chrome/chrome --type=ren
+karan     4274  0.0  0.8 1438616 66184 ?       Sl   Jul28   1:04 /usr/bin/nautilus --gapplication-ser
+karan     4375  0.0  0.4 733596 36164 ?        Ssl  Jul28   0:13 /usr/lib/gnome-terminal/gnome-termin
+karan     4741  0.0  0.0 433544  7424 ?        Ssl  Jul28   0:00 /usr/bin/zeitgeist-daemon
+karan     4748  0.0  0.1 326696  9624 ?        Ssl  Jul28   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgei
+root      4897  0.0  0.0      0     0 ?        S<   Jul28   0:00 [loop21]
+karan     5347  0.0  3.4 1390084 273960 tty2   Rl+  01:01   0:52 /opt/google/chrome/chrome --type=ren
+root      5777  0.0  0.1 108572  8128 ?        Ss   01:07   0:01 /usr/sbin/cupsd -l
+root      5779  0.0  0.1 305992 11052 ?        Ssl  01:07   0:08 /usr/sbin/cups-browsed
+karan     6047  0.0  0.7 958576 60892 ?        Sl   01:14   0:01 evince /home/karan/Desktop/5th Sem/C
+karan     6053  0.0  0.0 187732  4252 ?        Ssl  01:15   0:00 /usr/lib/evince/evinced
+karan     6098  0.0  0.9 947588 77412 ?        Sl   01:16   0:04 evince /home/karan/Desktop/5th Sem/C
+karan     6139  0.0  1.4 1157556 111452 tty2   Sl+  01:16   0:12 /opt/google/chrome/chrome --type=ren
+karan     6204  0.0  1.3 1131360 106768 tty2   Sl+  01:17   0:02 /opt/google/chrome/chrome --type=ren
+lp        6835  0.0  0.0  86412  5816 ?        S    19:20   0:00 /usr/lib/cups/notifier/dbus dbus://
+karan     6923  0.0  1.4 1165360 117820 tty2   Sl+  19:21   0:12 /opt/google/chrome/chrome --type=ren
+karan     7185  0.0  0.0  29952  5396 pts/0    Ss   19:25   0:00 bash
+karan     7501  0.0  1.8 961624 148280 tty2    SNl+ 19:35   0:05 /usr/bin/python3 /usr/bin/update-man
+karan     7563 97.9  0.0   4512    80 pts/0    R    19:36 216:03 ./a.out
+karan     7952  0.0  1.1 1129476 93992 tty2    Sl+  19:48   0:02 /opt/google/chrome/chrome --type=ren
+karan     7965  0.0  0.6 1061096 48560 tty2    Sl+  19:48   0:00 /opt/google/chrome/chrome --type=ren
+karan     8674  0.0  0.8 1348080 68548 ?       Sl   20:10   0:04 evince /home/karan/Desktop/5th Sem/C
+karan     9345  2.5  7.3 3179936 579268 tty2   Sl+  Jul28  78:36 /usr/lib/firefox/firefox -new-window
+karan     9434  0.0  1.0 1936712 82376 tty2    Sl+  Jul28   1:51 /usr/lib/firefox/firefox -contentpro
+karan    10979  0.0  3.5 2010592 277480 tty2   Sl+  Jul28   0:08 /usr/lib/firefox/firefox -contentpro
+root     11186  0.0  0.0      0     0 ?        I    21:41   0:01 [kworker/u8:30]
+root     11192  0.0  0.0      0     0 ?        I    21:41   0:01 [kworker/u8:36]
+root     11241  0.0  0.0      0     0 ?        S    21:41   0:00 [irq/131-mei_me]
+root     11327  0.0  0.0  25656  5992 ?        S    21:41   0:00 /sbin/dhclient -d -q -sf /usr/lib/Ne
+karan    11426  0.0  0.4 1030040 37904 tty2    Sl+  21:41   0:00 /opt/google/chrome/chrome --type=uti
+root     12524  0.0  0.0      0     0 ?        I    22:25   0:00 [kworker/0:0]
+root     12917  0.0  0.0      0     0 ?        I    22:41   0:00 [kworker/3:0]
+root     13190  0.0  0.0      0     0 ?        I    22:51   0:00 [kworker/3:2]
+root     13378  0.0  0.0      0     0 ?        I    22:58   0:00 [kworker/1:3]
+root     13399  0.0  0.0      0     0 ?        I    22:59   0:00 [kworker/2:1]
+root     13445  0.0  0.0      0     0 ?        I    23:00   0:00 [kworker/0:2]
+root     13457  0.0  0.0      0     0 ?        I    23:01   0:00 [kworker/u8:0]
+karan    13528  0.0  0.0  29820  5136 pts/1    Ss+  23:03   0:00 bash
+root     13547  0.0  0.0      0     0 ?        I    23:03   0:00 [kworker/1:0]
+root     13606  0.0  0.0      0     0 ?        I    23:06   0:00 [kworker/0:1]
+root     13763  0.0  0.0      0     0 ?        I    23:10   0:00 [kworker/2:0]
+root     13785  0.0  0.0      0     0 ?        I    23:11   0:00 [kworker/3:3]
+root     13875  0.0  0.0      0     0 ?        I    23:14   0:00 [kworker/0:3]
+root     13919  0.0  0.0      0     0 ?        I    23:15   0:00 [kworker/1:1]
+root     13920  0.0  0.0      0     0 ?        I    23:16   0:00 [kworker/2:2]
+root     13935  0.0  0.0      0     0 ?        I    23:16   0:00 [kworker/3:1]
+karan    13959  0.0  0.0   4512   712 pts/0    S+   23:16   0:00 ./a.out
+karan    13978  0.0  0.0  46772  3696 pts/0    R+   23:17   0:00 ps -aux
+root     21427  0.0  0.0      0     0 ?        S    Jul29   0:00 [jbd2/sda5-8]
+root     21428  0.0  0.0      0     0 ?        I<   Jul29   0:00 [ext4-rsv-conver]
+root     21450  0.0  0.0  22316  2584 ?        Ss   Jul29   0:00 /sbin/mount.ntfs /dev/sda4 /media/ka
+karan    21741  0.0  0.6 691100 52384 ?        Sl   Jul29   0:08 gedit /media/karan/New Volume/Backup
+karan    21765  0.0  1.6 1758688 132928 tty2   Sl+  Jul29   1:15 /usr/lib/firefox/firefox -contentpro
+karan    22106  0.0  1.8 1845392 150064 tty2   Sl+  Jul29   1:46 /usr/lib/firefox/firefox -contentpro
+karan    22209  0.0  0.0  11304   244 ?        S    Jul29   0:00 /usr/bin/ssh-agent -D -a /run/user/1
+karan    22997  1.4  3.2 1553644 260284 tty2   Sl+  Jul29  26:27 /opt/google/chrome/chrome --type=ren
+karan    23539  0.0  1.4 1164188 111488 tty2   Sl+  Jul29   0:11 /opt/google/chrome/chrome --type=ren
+karan    23558  0.0  1.3 1182608 108696 tty2   Sl+  Jul29   0:39 /opt/google/chrome/chrome --type=ren
+karan    24543  0.0  1.3 1151688 105004 tty2   Sl+  Jul29   0:04 /opt/google/chrome/chrome --type=ren
+karan    25445  0.2  3.7 1411168 300772 tty2   Sl+  Jul29   5:10 /opt/google/chrome/chrome --type=ren
+root     25649  0.0  0.0      0     0 ?        I<   Jul29   0:00 [kworker/u9:0]
+karan    26117  0.0  1.3 1148448 104064 tty2   Sl+  Jul29   0:12 /opt/google/chrome/chrome --type=ren
+karan    26153  0.0  1.3 1147400 104680 tty2   Sl+  Jul29   0:42 /opt/google/chrome/chrome --type=ren
+karan    29148  0.1  2.6 1212744 212028 ?      Ssl  Jul29   2:11 /opt/sublime_text/sublime_text
+karan    29161  0.0  0.2 128960 16740 ?        Sl   Jul29   0:02 /opt/sublime_text/plugin_host 29148 
+karan    29372  0.0  1.5 1189464 120344 tty2   Sl+  Jul29   0:06 /opt/google/chrome/chrome --type=ren
+karan    29657  0.0  1.2 1143896 101140 tty2   Sl+  Jul29   0:03 /opt/google/chrome/chrome --type=ren
+karan    29689  0.0  1.2 1166484 102848 tty2   Sl+  Jul29   0:08 /opt/google/chrome/chrome --type=ren
+karan    31085  0.0  1.0 1094008 82112 tty2    Sl+  Jul29   0:01 /opt/google/chrome/chrome --type=ren
+karan    31299  0.0  1.3 1165092 104020 tty2   Sl+  Jul29   0:26 /opt/google/chrome/chrome --type=ren
+karan    31340  0.0  1.2 1147400 102392 tty2   Sl+  Jul29   0:26 /opt/google/chrome/chrome --type=ren
+karan    31368  0.0  1.2 1137172 99124 tty2    Sl+  Jul29   0:02 /opt/google/chrome/chrome --type=ren
+karan    31386  0.1  1.7 1205520 142288 tty2   Sl+  Jul29   2:38 /opt/google/chrome/chrome --type=ren
+karan    31401  0.0  1.3 1142176 103176 tty2   Sl+  Jul29   0:11 /opt/google/chrome/chrome --type=ren
+root     32610  0.0  0.0      0     0 ?        I<   Jul29   0:00 [kworker/u9:2]
+turtle > ls ;; ps
+a.out  dup.c  make-tokens.c  pipes.c  turtle2.c  turtle.c
+  PID TTY          TIME CMD
+ 7185 pts/0    00:00:00 bash
+ 7563 pts/0    03:36:09 a.out
+13959 pts/0    00:00:00 a.out
+13980 pts/0    00:00:00 ps
+turtle > echo hello > hello.txt
+turtle > vim helo.txt
+turtle > ^C
+KeyboardInterrupt received
+
+turtle > ^C
+KeyboardInterrupt received
+
+turtle > 
+turtle > 
+turtle > 
+turtle > pwd  
+/home/karan/Desktop/5th Sem/CS333/160050068_lab3/turtles
+turtle > cd ..
+turtle > pwd
+/home/karan/Desktop/5th Sem/CS333/160050068_lab3
+turtle > cd jfshjsflhj
+no directory
+turtle > cd njdsjf jnfjdnjfs
+Wrong number of arguments
+turtle > cd
+Wrong number of arguments
+turtle > 
+turtle > ls      
+morse-code  turtles
+turtle > cd turtles
+turtle > ls
+a.out  dup.c  make-tokens.c  output.txt  pipes.c  report.txt  turtle2.c  turtle.c
+turtle > touch me
+turtle > ls
+a.out  dup.c  make-tokens.c  me  output.txt  pipes.c  report.txt  turtle2.c  turtle.c
+turtle > 
+

@@ -1,0 +1,7 @@
+1. These 2 lines are basically adding the page referenced by the address v to the freelist by making it the head of the freelist.
+ The line "r->next = kmem.freelist;" gets the pointer to the freelist and saves it into r->next.
+ The next line now updates the freelist pointer to r. Note that r->next contains the pointer to the original freelist.
+
+2. The first line gets the physical address of the page table corresponding to the given va.
+The second line gets virtual address of the page table and typecasts it into pointer of type pte_t which is the return type of the function.
+The third line gets the reference to the page table entry corresponding to the given va and returns it.

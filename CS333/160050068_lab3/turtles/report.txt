@@ -1,0 +1,7 @@
+1. Tokenised the commands
+2. checked for ctrl-c interrupt.
+3. if enter was pressed continued.
+4. if received exit or cd commands execute from the parent
+5. else check for ;; symbols
+6. loop through all instructions if there is a ';;' . and again checked if they were cd or exit.
+7. executed othr commands.
